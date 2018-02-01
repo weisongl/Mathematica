@@ -1,0 +1,2264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     66920,       2256]
+NotebookOptionsPosition[     63046,       2128]
+NotebookOutlinePosition[     63404,       2144]
+CellTagsIndexPosition[     63361,       2141]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["vE and vEE", "Subchapter",
+ CellChangeTimes->{{3.7096387504097033`*^9, 3.709638759758017*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.709638691469597*^9, 3.709638699333762*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uE", "=", 
+   RowBox[{
+    RowBox[{"-", "\[Mu]"}], " ", "\[CapitalEpsilon]", " ", "xi"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{"-", "\[Beta]"}], " ", "uE"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q", "=", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{"p", ",", 
+     RowBox[{"{", 
+      RowBox[{"xi", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pq", "=", 
+   RowBox[{"p", "/", "q"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.709637996083585*^9, 3.709638021919668*^9}, {
+  3.709638082687221*^9, 3.709638109417923*^9}, {3.7096381575207853`*^9, 
+  3.709638164801262*^9}, {3.709638200672483*^9, 3.70963820135954*^9}, {
+  3.709638331682859*^9, 3.709638334746971*^9}, {3.709639101683783*^9, 
+  3.709639104660536*^9}, {3.7111948779102993`*^9, 3.7111948793978767`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sol", "=", 
+   RowBox[{"DSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{"pq", ",", "\[CapitalEpsilon]"}], "]"}], "+", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"pq", " ", "*", 
+            RowBox[{"vE", "[", "xi", "]"}]}], " ", ",", "xi"}], "]"}]}], "==",
+         "0"}], ",", 
+       RowBox[{
+        RowBox[{"vE", "[", "1", "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+     RowBox[{"vE", "[", "xi", "]"}], ",", "xi"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.709638181918408*^9, 3.709638278644537*^9}, {
+  3.709638320861103*^9, 3.70963832275847*^9}, {3.709638363437689*^9, 
+  3.709638364420698*^9}, {3.7096384140411997`*^9, 3.7096384440322247`*^9}, {
+  3.7096385762178183`*^9, 3.709638578462714*^9}, {3.709639114309187*^9, 
+  3.709639120170574*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"v", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"vE", "[", "xi", "]"}], "/.", 
+    RowBox[{"sol", "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], "//", "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.70963847352279*^9, 3.7096384793791513`*^9}, {
+   3.7096385435321503`*^9, 3.7096385490962763`*^9}, 3.709638579594452*^9, 
+   3.709639112164802*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", "xi"}], " ", "\[Beta]", " ", "\[CapitalEpsilon]", " ", 
+     "\[Mu]"}]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Beta]", " ", "\[CapitalEpsilon]", " ", "\[Mu]"}]], "-", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+       "xi", " ", "\[Beta]", " ", "\[CapitalEpsilon]", " ", "\[Mu]"}]], " ", 
+      "xi"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Beta]", " ", "\[CapitalEpsilon]", " ", "\[Mu]"}]]}], "+", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+         "xi", " ", "\[Beta]", " ", "\[CapitalEpsilon]", " ", "\[Mu]"}]]}], 
+       ")"}], " ", 
+      RowBox[{"Coth", "[", 
+       RowBox[{"\[Beta]", " ", "\[CapitalEpsilon]", " ", "\[Mu]"}], "]"}]}]}],
+     ")"}]}], "\[CapitalEpsilon]"]], "Output",
+ CellChangeTimes->{{3.709638550207078*^9, 3.709638581007053*^9}, 
+   3.709638703562727*^9, 3.7096387766846933`*^9, 3.709639124332808*^9, {
+   3.711194785919503*^9, 3.711194799993352*^9}, {3.711194885718872*^9, 
+   3.711194900157846*^9}, 3.711196005149159*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"vE", "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{"v", ",", 
+    RowBox[{"\[CapitalEpsilon]", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.709638454682316*^9, 3.709638465833459*^9}, 
+   3.7096385653805027`*^9, {3.709638764671424*^9, 3.709638766058305*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "2"]}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["xi", "2"]}], ")"}], " ", "\[Beta]", " ", 
+  "\[Mu]"}]], "Output",
+ CellChangeTimes->{
+  3.7096384663540907`*^9, {3.709638567475091*^9, 3.7096385812700157`*^9}, 
+   3.709638703855122*^9, 3.709638776982225*^9, 3.709639124628997*^9, {
+   3.711194786207576*^9, 3.711194800235993*^9}, {3.7111948917789993`*^9, 
+   3.711194900366379*^9}, 3.711196005162568*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"vEE", "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"v", ",", "\[CapitalEpsilon]"}], "]"}], ",", 
+    RowBox[{"\[CapitalEpsilon]", "\[Rule]", "0"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.709638585255835*^9, 3.709638596870137*^9}, {
+  3.709638772455974*^9, 3.709638773620432*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "6"], " ", "xi", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["xi", "2"]}], ")"}], " ", 
+  SuperscriptBox["\[Beta]", "2"], " ", 
+  SuperscriptBox["\[Mu]", "2"]}]], "Output",
+ CellChangeTimes->{
+  3.709638598024845*^9, 3.7096387044573593`*^9, 3.709638777613596*^9, 
+   3.709639125238071*^9, {3.711194786708004*^9, 3.7111948007492933`*^9}, 
+   3.7111949008315163`*^9, 3.7111960051755*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["JE JEE UE and UEE", "Subchapter",
+ CellChangeTimes->{{3.7096389916507893`*^9, 3.709638997380899*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"JE", "=", 
+   RowBox[{"D", "[", 
+    RowBox[{"vE", ",", "xi"}], "]"}]}],
+  FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox["JEEMJEJE",
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox["=",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{"vEE", ",", "xi"}], "]"}], "+", 
+     RowBox[{"vE", "*", " ", 
+      RowBox[{"D", "[", 
+       RowBox[{"vE", ",", "xi", ",", "xi"}], "]"}]}]}],
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox["//",
+    FontColor->RGBColor[1, 0, 0]], "Simplify"}]}]}], "Input",
+ CellChangeTimes->{{3.7096389637233458`*^9, 3.709638981264904*^9}, {
+  3.7096391370074587`*^9, 3.709639140084138*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "xi"}], " ", "\[Beta]", " ", "\[Mu]"}]], "Output",
+ CellChangeTimes->{{3.709638967736621*^9, 3.7096389822849817`*^9}, {
+   3.709639134056723*^9, 3.709639141189042*^9}, 3.711194800792083*^9, 
+   3.7111949008979883`*^9, 3.71119600517854*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "3"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "2"}], "+", 
+    RowBox[{"3", " ", 
+     SuperscriptBox["xi", "2"]}]}], ")"}], " ", 
+  SuperscriptBox["\[Beta]", "2"], " ", 
+  SuperscriptBox["\[Mu]", "2"]}]], "Output",
+ CellChangeTimes->{{3.709638967736621*^9, 3.7096389822849817`*^9}, {
+   3.709639134056723*^9, 3.709639141189042*^9}, 3.711194800792083*^9, 
+   3.7111949008979883`*^9, 3.711196005187439*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"UE", "=", " ", 
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"\[Beta]", " ", "u"}], ",", "\[CapitalEpsilon]"}], "]"}], "-", 
+   RowBox[{"\[Beta]", " ", "vE", " ", "F"}]}]}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"JEMUE", "=", 
+   RowBox[{"JE", "-", "UE"}]}],
+  FontColor->RGBColor[1, 0, 0]]}], "Input",
+ CellChangeTimes->{{3.709639029622937*^9, 3.709639029889596*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "2"], " ", "F", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["xi", "2"]}], ")"}], " ", 
+  SuperscriptBox["\[Beta]", "2"], " ", "\[Mu]"}]], "Output",
+ CellChangeTimes->{{3.70963901740491*^9, 3.709639030712278*^9}, 
+   3.709639145089981*^9, 3.711194800823818*^9, 3.711194900910931*^9, 
+   3.7111960051910467`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "xi"}], " ", "\[Beta]", " ", "\[Mu]"}], "-", 
+  RowBox[{
+   FractionBox["1", "2"], " ", "F", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xi", "2"]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "2"], " ", "\[Mu]"}]}]], "Output",
+ CellChangeTimes->{{3.70963901740491*^9, 3.709639030712278*^9}, 
+   3.709639145089981*^9, 3.711194800823818*^9, 3.711194900910931*^9, 
+   3.711196005191516*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FE", "=", 
+  RowBox[{"-", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"\[Beta]", " ", "u"}], ",", "\[CapitalEpsilon]", ",", "xi"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{3.709639043036949*^9, 3.7096391485826397`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.709639044673378*^9, 3.70963914903163*^9, 
+  3.711194800836624*^9, 3.711194900922859*^9, 3.711196005203617*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"vEj", "=", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xj", "2"]}], ")"}], " ", "\[Beta]", " ", 
+   "\[Mu]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"UEE", "=", 
+  RowBox[{
+   RowBox[{"\[Beta]", " ", 
+    RowBox[{"D", "[", 
+     RowBox[{"uE", ",", "\[CapitalEpsilon]", ",", "\[CapitalEpsilon]"}], 
+     "]"}]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"vEE", "+", 
+      RowBox[{"vE", "*", 
+       RowBox[{"D", "[", 
+        RowBox[{"vE", ",", "xi"}], "]"}]}]}], ")"}], "\[Beta]", " ", "F"}], 
+   "+", 
+   RowBox[{"vE", "*", "\[Beta]", " ", "\[Phi]", "*", "vEj"}], "-", 
+   RowBox[{"2", "  ", "vE", " ", "FE"}]}]}]}], "Input",
+ CellChangeTimes->{{3.709639061630953*^9, 3.709639078631503*^9}, {
+  3.7096391525756197`*^9, 3.709639173442727*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "2"]}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", 
+    SuperscriptBox["xj", "2"]}], ")"}], " ", "\[Beta]", " ", 
+  "\[Mu]"}]], "Output",
+ CellChangeTimes->{{3.709639056795986*^9, 3.7096390806198587`*^9}, {
+   3.709639153487554*^9, 3.709639174394001*^9}, 3.711194800848763*^9, 
+   3.711194900934122*^9, 3.711196005215909*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["2", "3"]}], " ", "F", " ", "xi", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xi", "2"]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "3"], " ", 
+   SuperscriptBox["\[Mu]", "2"]}], "+", 
+  RowBox[{
+   FractionBox["1", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xi", "2"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xj", "2"]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "3"], " ", 
+   SuperscriptBox["\[Mu]", "2"], " ", "\[Phi]"}]}]], "Output",
+ CellChangeTimes->{{3.709639056795986*^9, 3.7096390806198587`*^9}, {
+   3.709639153487554*^9, 3.709639174394001*^9}, 3.711194800848763*^9, 
+   3.711194900934122*^9, 3.711196005216527*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["AEE", "Subchapter",
+ CellChangeTimes->{{3.7096392055636387`*^9, 3.709639205982033*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AEE", "=", 
+  RowBox[{
+   RowBox[{"-", "JEEMJEJE"}], "+", "UEE", "-", 
+   RowBox[{"Var", "[", "JEMUE", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.709639268407806*^9, 3.709639292247316*^9}, {
+   3.709639367450795*^9, 3.7096393822552433`*^9}, 3.709639568611249*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "3"]}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "2"}], "+", 
+     RowBox[{"3", " ", 
+      SuperscriptBox["xi", "2"]}]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "2"], " ", 
+   SuperscriptBox["\[Mu]", "2"]}], "-", 
+  RowBox[{
+   FractionBox["2", "3"], " ", "F", " ", "xi", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xi", "2"]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "3"], " ", 
+   SuperscriptBox["\[Mu]", "2"]}], "+", 
+  RowBox[{
+   FractionBox["1", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xi", "2"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["xj", "2"]}], ")"}], " ", 
+   SuperscriptBox["\[Beta]", "3"], " ", 
+   SuperscriptBox["\[Mu]", "2"], " ", "\[Phi]"}], "-", 
+  RowBox[{"Var", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "xi"}], " ", "\[Beta]", " ", "\[Mu]"}], "-", 
+    RowBox[{
+     FractionBox["1", "2"], " ", "F", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       SuperscriptBox["xi", "2"]}], ")"}], " ", 
+     SuperscriptBox["\[Beta]", "2"], " ", "\[Mu]"}]}], "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.7096392931054296`*^9, {3.7096393763609037`*^9, 3.7096393825934353`*^9}, 
+   3.709639569052738*^9, 3.711194900946145*^9, 3.711196005229926*^9}]
+}, Open  ]],
+
+Cell["constant part for one direction", "Text",
+ CellChangeTimes->{{3.70963941996447*^9, 3.709639430320916*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      SuperscriptBox["xi", "2"]}], ")"}], " ", 
+    SuperscriptBox["\[Beta]", "2"], " ", 
+    SuperscriptBox["\[Mu]", "2"]}], "-", 
+   RowBox[{
+    FractionBox["1", "3"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", 
+      RowBox[{"3", " ", 
+       SuperscriptBox["xi", "2"]}]}], ")"}], " ", 
+    SuperscriptBox["\[Beta]", "2"], " ", 
+    SuperscriptBox["\[Mu]", "2"]}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.709639410694187*^9, 3.709639412023574*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "3"]}], " ", 
+  SuperscriptBox["\[Beta]", "2"], " ", 
+  SuperscriptBox["\[Mu]", "2"]}]], "Output",
+ CellChangeTimes->{3.709639412271796*^9, 3.7111949009573812`*^9, 
+  3.7111960052432547`*^9}]
+}, Open  ]],
+
+Cell["In Sum for x direction", "Text",
+ CellChangeTimes->{{3.70963957949469*^9, 3.709639582302661*^9}, {
+  3.709639671298429*^9, 3.709639675861856*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AEE", "=", 
+   RowBox[{"<", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "3"]}], " ", 
+     SuperscriptBox["\[Beta]", "2"], " ", 
+     SuperscriptBox["\[Mu]", "2"]}], ">", 
+    RowBox[{"+", 
+     RowBox[{"<", " ", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox["xi", "2"]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox["xj", "2"]}], ")"}], " ", 
+       SuperscriptBox["\[Beta]", "3"], " ", 
+       SuperscriptBox["\[Mu]", "2"], " ", "\[Phi]"}], ">", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["1", "4"]}], 
+       SuperscriptBox["\[Beta]", "4"], " ", 
+       SuperscriptBox["\[Mu]", "2"]}], "<", 
+      RowBox[{"Var", "[", " ", 
+       RowBox[{"F", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SuperscriptBox["xi", "2"]}], ")"}]}], " ", "]"}], ">"}]}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.709639583372761*^9, 3.709639663812858*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  StyleBox[
+   RowBox[{
+    StyleBox["=",
+     FontColor->RGBColor[0., 0., 0.]], 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       StyleBox[
+        FractionBox[
+         RowBox[{
+          StyleBox["N",
+           FontColor->RGBColor[1, 0, 0]], 
+          StyleBox[" ",
+           FontColor->RGBColor[1, 0, 0]], 
+          SuperscriptBox[
+           RowBox[{"\[Beta]", " "}], "2"], 
+          StyleBox[
+           SuperscriptBox["\[Micro]", "2"],
+           FontColor->GrayLevel[0]]}], "3"],
+        FontColor->RGBColor[0., 0., 0.]]}], 
+      StyleBox["+",
+       FontColor->RGBColor[1, 0, 0]]}], 
+     StyleBox["<",
+      FontColor->RGBColor[0., 0., 0.]], 
+     RowBox[{
+      StyleBox[
+       FractionBox["1", "4"],
+       FontColor->RGBColor[1, 0, 0]], 
+      StyleBox[
+       SuperscriptBox[
+        RowBox[{"\[Beta]", " "}], "3"],
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       SuperscriptBox["\[Micro]", "2"],
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"i", "=", "1"}], "N"], 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "=", "1"}], "N"], 
+         RowBox[{
+          SubscriptBox["\[Phi]", "ij"], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SubsuperscriptBox["x", "i", "2"]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            SubsuperscriptBox["x", "j", "2"]}], ")"}]}]}]}],
+       FontColor->RGBColor[1, 0, 0]]}], 
+     StyleBox[">",
+      FontColor->RGBColor[0., 0., 0.]], 
+     StyleBox[
+      RowBox[{
+       RowBox[{
+        StyleBox[
+         StyleBox["-", "Subsubsection",
+          FontColor->RGBColor[0., 0., 0.]], "Subsubsection",
+         FontColor->RGBColor[0., 0., 0.]], 
+        FractionBox[
+         StyleBox["1",
+          FontColor->RGBColor[1, 0, 0]], "4"]}], 
+       SuperscriptBox["\[Beta]", "4"], " ", 
+       SuperscriptBox["\[Micro]", "2"], 
+       RowBox[{"var", "[", " ", 
+        RowBox[{
+         SubscriptBox["F", "i"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", 
+           SubsuperscriptBox["x", "i", "2"]}], ")"}]}], "]"}]}],
+      FontColor->RGBColor[0., 0., 0.]]}]}], "Subsubsection"],
+  FontSize->48]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Combination of X Y Z directions", "Subchapter",
+ CellChangeTimes->{{3.650372173541915*^9, 3.65037217864251*^9}, {
+  3.650380771150128*^9, 3.650380789786748*^9}},
+ ExpressionUUID -> "a95c533f-397e-4849-a57a-ab1dec795c27"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+  "We", " ", "still", " ", "take", " ", "about", " ", "only", " ", "z", " ", 
+   "direction", " ", 
+   RowBox[{"here", ".", " ", "Remember"}], " ", "this", " ", "\[Theta]", " ", 
+   "is", " ", "angle", " ", "between", " ", "ei", " ", "and", " ", "z", " ", 
+   "axis"}]], "Input",
+  ExpressionUUID -> "a2f3d6ad-7142-4950-a870-6094b23d2e93"],
+ "(subscript z is omitted here for simplification,i.e this \[Theta] is \
+actually ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Theta]", "z"], TraditionalForm]],
+  ExpressionUUID -> "4711501e-0e97-4e0d-a743-4ee846afc3e5"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.650372258013376*^9, 3.650372282747381*^9}, {
+  3.650375035330496*^9, 3.650375053166874*^9}, {3.6503796775163116`*^9, 
+  3.650379726016368*^9}, {3.6503808394663057`*^9, 3.650380856187416*^9}, {
+  3.7034325510691566`*^9, 3.7034325620195923`*^9}},
+ ExpressionUUID -> "311611f6-66ef-494c-bdb3-ce18d858cb52"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["F", 
+   RowBox[{"i", " "}]], "=", 
+  RowBox[{
+   RowBox[{"-", " ", 
+    FractionBox["du", "dx"]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", " ", 
+      FractionBox["du", "d\[Theta]"]}], 
+     FractionBox["d\[Theta]", "dx"]}], "=", 
+    RowBox[{
+     FractionBox["du", "d\[Theta]"], " ", 
+     FractionBox["1", 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.650372199987965*^9, 3.65037224926254*^9}, {
+   3.65037228928633*^9, 3.6503723192499113`*^9}, {3.650375608344899*^9, 
+   3.650375618032833*^9}, {3.65383447517307*^9, 3.653834479940592*^9}, 
+   3.6573103612273073`*^9},
+ ExpressionUUID -> "164a1f71-f015-41b7-bee1-87212eb0ece5"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"du", " ", 
+   RowBox[{"Csc", "[", "\[Theta]", "]"}]}], "d\[Theta]"]], "Output",
+ CellChangeTimes->{3.711196005449092*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Definition of torque (",
+ StyleBox["\[Theta]",
+  FontWeight->"Bold"],
+ ")\n",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["\[Tau]",
+    FontWeight->"Plain",
+    FontSlant->"Italic"], "=", 
+   RowBox[{"-", 
+    FractionBox["du", 
+     StyleBox[
+      RowBox[{"d", 
+       StyleBox["\[Theta]",
+        FontWeight->"Plain",
+        FontSlant->"Italic"]}]]]}]}]], "Input",
+  ExpressionUUID -> "300b30e7-5ba0-42cf-ada8-2899eb61f917"],
+ "\nWe note that du/d\[Theta] is positive since more align with electric \
+field would result in less energy, thus \[Tau] would be negtive"
+}], "Text",
+ CellChangeTimes->{{3.650372324174939*^9, 3.650372338141548*^9}, {
+  3.65037498253612*^9, 3.6503749934111967`*^9}, {3.7044930017897596`*^9, 
+  3.7044930666643476`*^9}},
+ ExpressionUUID -> "2a71cf39-30fb-4efd-99df-02ceb98fcfde"],
+
+Cell["the projection of torque on axis (ei\[Cross]z)/Sin[\[Theta]] ", "Text",
+ CellChangeTimes->{{3.6908914808798857`*^9, 3.6908914979738293`*^9}},
+ ExpressionUUID -> "159496c6-220d-4d80-a8f1-3b6c26ee904b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["du", "d\[Theta]"], "=", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{
+     StyleBox["\[Tau]",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], 
+     StyleBox[".",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["(",
+       FontWeight->"Plain",
+       FontSlant->"Italic"], 
+      RowBox[{
+       StyleBox["ei",
+        FontWeight->"Plain",
+        FontSlant->"Plain"], 
+       StyleBox["\[Cross]",
+        FontWeight->"Plain"], 
+       StyleBox["z",
+        FontWeight->"Bold"]}], 
+      StyleBox[")",
+       FontWeight->"Plain",
+       FontSlant->"Italic"]}]}]}], 
+   StyleBox["/",
+    FontWeight->"Plain",
+    FontSlant->"Italic"], 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.650375166441845*^9, 3.650375167177643*^9}, {
+  3.650375384760001*^9, 3.65037541886723*^9}},
+ ExpressionUUID -> "709bc71a-b2f2-43f0-b360-d53bf9767f22"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"Csc", "[", "\[Theta]", "]"}]}], " ", 
+  RowBox[{"\[Tau]", ".", 
+   RowBox[{"ei", "\[Cross]", "z"}]}]}]], "Output",
+ CellChangeTimes->{3.711196005463386*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   SubscriptBox["F", "i"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{
+      StyleBox["\[Tau]",
+       FontWeight->"Plain",
+       FontSlant->"Italic"], 
+      StyleBox[".",
+       FontWeight->"Plain",
+       FontSlant->"Italic"], 
+      RowBox[{
+       StyleBox["(",
+        FontWeight->"Plain",
+        FontSlant->"Italic"], 
+       RowBox[{
+        StyleBox["ei",
+         FontWeight->"Plain",
+         FontSlant->"Plain"], 
+        StyleBox["\[Cross]",
+         FontWeight->"Plain"], 
+        StyleBox["z",
+         FontWeight->"Bold"]}], 
+       StyleBox[")",
+        FontWeight->"Plain",
+        FontSlant->"Italic"]}]}]}], 
+    StyleBox["/",
+     FontSlant->"Italic"], 
+    SuperscriptBox[
+     RowBox[{
+      StyleBox["(",
+       FontSlant->"Italic"], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}], ")"}], "2"]}]}],
+  FontSize->36,
+  FontColor->RGBColor[1, 0, 0]]], "Input",
+ CellChangeTimes->{{3.650375438352619*^9, 3.650375458382997*^9}, {
+  3.65037559572805*^9, 3.650375624016526*^9}, {3.690889967765233*^9, 
+  3.690889967924101*^9}},
+ ExpressionUUID -> "4a384f05-3583-4ecb-b109-bb8a4ae02652"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   SuperscriptBox[
+    RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"]}], " ", 
+  RowBox[{"\[Tau]", ".", 
+   RowBox[{"ei", "\[Cross]", "z"}]}]}]], "Output",
+ CellChangeTimes->{3.711196005478611*^9}]
+}, Open  ]],
+
+Cell["so for the z direction:", "Text",
+ CellChangeTimes->{{3.650375570534924*^9, 3.650375570670992*^9}, {
+  3.650375634588253*^9, 3.650375640667954*^9}},
+ ExpressionUUID -> "346e5240-efde-42da-a64a-448a8114ebcf"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[" ",
+   FontColor->RGBColor[0, 0, 1]], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox[
+      StyleBox["\[Phi]",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{"i", ",", "k"}]], 
+     RowBox[{
+      StyleBox["(",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{
+       StyleBox[
+        RowBox[{"-", "1"}],
+        FontColor->RGBColor[0, 0, 1]], 
+       StyleBox["+",
+        FontColor->RGBColor[0, 0, 1]], 
+       SuperscriptBox[
+        SubscriptBox["x", "i"], "2"]}], 
+      StyleBox[")",
+       FontColor->RGBColor[0, 0, 1]]}], 
+     StyleBox[" ",
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{
+      StyleBox["(",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{
+       StyleBox[
+        RowBox[{"-", "1"}],
+        FontColor->RGBColor[0, 0, 1]], 
+       StyleBox["+",
+        FontColor->RGBColor[0, 0, 1]], 
+       SuperscriptBox[
+        SubscriptBox["x", "k"], "2"]}], 
+      StyleBox[")",
+       FontColor->RGBColor[0, 0, 1]]}]}], 
+    StyleBox["=",
+     FontColor->RGBColor[0, 0, 1]], 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["[",
+        FontColor->RGBColor[0, 0, 1]], 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox[
+           StyleBox["\[PartialD]",
+            FontColor->RGBColor[0, 0, 1]], "2"], "u"}], 
+         RowBox[{
+          RowBox[{"\[PartialD]", 
+           SubscriptBox["\[Theta]", "i"]}], 
+          RowBox[{"\[PartialD]", 
+           SubscriptBox["\[Theta]", "k"]}]}]], ".", 
+        RowBox[{"(", 
+         RowBox[{"ej", "\[Cross]", "Z"}], ")"}]}], "]"}], ".", 
+      RowBox[{"(", 
+       RowBox[{"ei", "\[Cross]", "Z"}], ")"}]}], 
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox["Sin", "2"], "[", 
+       SubscriptBox["\[Theta]", "i"], "]"}]], 
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox["Sin", "2"], "[", 
+       SubscriptBox["\[Theta]", "k"], "]"}]], 
+     RowBox[{
+      SuperscriptBox["Sin", "2"], "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}], 
+     RowBox[{
+      SuperscriptBox["Sin", "2"], "[", 
+      SubscriptBox["\[Theta]", "k"], "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"=", 
+    RowBox[{
+     RowBox[{
+      StyleBox["[",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox[
+          StyleBox["\[PartialD]",
+           FontColor->RGBColor[0, 0, 1]], "2"], "u"}], 
+        RowBox[{
+         RowBox[{"\[PartialD]", 
+          SubscriptBox["\[Theta]", "i"]}], 
+         RowBox[{"\[PartialD]", 
+          SubscriptBox["\[Theta]", "k"]}]}]], ".", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["e", "k"], "\[Cross]", "Z"}], ")"}]}], "]"}], ".", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["e", "i"], "\[Cross]", "Z"}], ")"}]}]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.650375573258963*^9, 3.6503756449758167`*^9, {3.650375819877726*^9, 
+   3.650375839190605*^9}, {3.650378441435649*^9, 3.650378452902042*^9}, {
+   3.650379890851069*^9, 3.650379954362479*^9}, {3.650380038333424*^9, 
+   3.6503801714800177`*^9}, 3.650380340650496*^9, {3.6503803961907883`*^9, 
+   3.650380400594926*^9}, {3.653834466693508*^9, 3.653834487855514*^9}, 
+   3.6908951653209677`*^9, {3.690908433896175*^9, 3.690908437182425*^9}, 
+   3.704492882350185*^9, {3.7096537261844587`*^9, 3.709653727168841*^9}},
+ ExpressionUUID -> "48417f06-4951-4a05-84ac-3f1ffc30120f"],
+
+Cell["if we sum over X ,Y and Z direction", "Text",
+ CellChangeTimes->{{3.650375650020198*^9, 3.650375661500162*^9}, {
+  3.650375691697752*^9, 3.650375694801138*^9}},
+ ExpressionUUID -> "cfb24b4d-33f9-4d20-9633-5ed778a9e477"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["\[Sum]", "x"], " ", 
+     RowBox[{
+      SubscriptBox["F", "i"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SuperscriptBox[
+         SubscriptBox["x", "i"], "2"]}], ")"}]}]}], ")"}], "2"], "=", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["\[Sum]", "x"], " ", 
+      RowBox[{
+       StyleBox[
+        RowBox[{
+         StyleBox["\[Tau]",
+          FontWeight->"Plain",
+          FontSlant->"Italic"], "i"}]], 
+       StyleBox[".",
+        FontWeight->"Plain",
+        FontSlant->"Italic"], 
+       RowBox[{
+        StyleBox["(",
+         FontSlant->"Italic"], 
+        RowBox[{
+         StyleBox["ei",
+          FontWeight->"Plain",
+          FontSlant->"Plain"], 
+         StyleBox["\[Cross]",
+          FontWeight->"Plain"], 
+         StyleBox["X",
+          FontWeight->"Bold"]}], 
+        StyleBox[")",
+         FontSlant->"Italic"]}]}]}], ")"}], "2"], "=", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Sum]", "x"], " ", 
+       RowBox[{"X", ".", 
+        RowBox[{"(", 
+         RowBox[{"\[Tau]i", "\[Cross]", "ei"}], ")"}]}]}], ")"}], "2"], "=", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"X", ".", 
+       RowBox[{
+        SubscriptBox["\[Sum]", "x"], " ", 
+        RowBox[{"(", 
+         RowBox[{"\[Tau]i", "\[Cross]", "ei"}], ")"}]}]}], ")"}], 
+     "2"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7057716431084538`*^9, 3.7057717590236597`*^9}},
+ ExpressionUUID -> "3a51e52e-8b72-4995-ad7d-6df5c60f0905"],
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"X", ".", 
+    RowBox[{"(", 
+     RowBox[{"x", " ", 
+      RowBox[{"\[Tau]i", "\[Cross]", "ei"}]}], ")"}]}], ")"}], "2"]], "Output",\
+
+ CellChangeTimes->{3.71119600626532*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Note that ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["\[Sum]", "x"], " ", 
+   RowBox[{"(", 
+    RowBox[{"\[Tau]i", "\[Cross]", "ei"}], ")"}]}]], "Input",
+  CellChangeTimes->{{3.7057716431084538`*^9, 3.7057717590236597`*^9}},
+  ExpressionUUID -> "ea286590-3772-4b38-85d8-9557ff65fa6f"],
+ " as a vector, so if we sum over x y and z direction the result would just \
+be:\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"\[Sum]", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Tau]i", "\[Cross]", "ei"}], ")"}]}], ")"}], "2"], 
+   TraditionalForm]],
+  ExpressionUUID -> "2b7354f8-5bd9-47f3-ab93-83c563f56e87"],
+ " by pure math. "
+}], "Text",
+ CellChangeTimes->{{3.705771723048853*^9, 3.705771727472805*^9}, {
+  3.705771763472596*^9, 3.7057718419877863`*^9}},
+ ExpressionUUID -> "f4d6a175-49a1-4e0a-949c-ce5835839754"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Sum]", 
+    RowBox[{"x", ",", "y", ",", "z"}]], " ", 
+   RowBox[{
+    SubscriptBox["F", "i"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      SuperscriptBox[
+       SubscriptBox["x", "i"], "2"]}], ")"}]}]}], "=", 
+  RowBox[{
+   RowBox[{
+    StyleBox["\[Tau]",
+     FontWeight->"Plain",
+     FontSlant->"Italic"], 
+    StyleBox[".",
+     FontWeight->"Plain",
+     FontSlant->"Italic"], 
+    RowBox[{
+     StyleBox["(",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["ei",
+       FontWeight->"Plain",
+       FontSlant->"Plain"], 
+      StyleBox["\[Cross]",
+       FontWeight->"Plain"], 
+      StyleBox["X",
+       FontWeight->"Bold"]}], 
+     StyleBox[")",
+      FontSlant->"Italic"]}]}], 
+   StyleBox["+",
+    FontSlant->"Italic"], 
+   RowBox[{
+    StyleBox["\[Tau]",
+     FontWeight->"Plain",
+     FontSlant->"Italic"], 
+    StyleBox[".",
+     FontSlant->"Italic"], 
+    RowBox[{
+     StyleBox["(",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["ei",
+       FontSlant->"Plain"], "\[Cross]", "Y"}], 
+     StyleBox[")",
+      FontSlant->"Italic"]}]}], 
+   StyleBox["+",
+    FontSlant->"Italic"], 
+   RowBox[{
+    StyleBox["\[Tau]",
+     FontWeight->"Plain",
+     FontSlant->"Italic"], 
+    StyleBox[".",
+     FontSlant->"Italic"], 
+    RowBox[{
+     StyleBox["(",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["ei",
+       FontSlant->"Plain"], "\[Cross]", "Z"}], 
+     StyleBox[")",
+      FontSlant->"Italic"]}]}]}]}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"=", 
+   RowBox[{
+    RowBox[{"X", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}], "+", 
+    RowBox[{"Y", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}], "+", 
+    RowBox[{"Z", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}]}]}],
+  FontSlant->"Italic"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1", ",", "1"}], "}"}], ".", 
+    RowBox[{"(", 
+     RowBox[{"\[Tau]", "\[Cross]", 
+      SubscriptBox["e", "i"]}], ")"}]}]}],
+  FontSlant->"Italic"], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Sum]", 
+    RowBox[{"x", ",", "y", ",", "z"}]], 
+   StyleBox[" ",
+    FontColor->GrayLevel[0]], 
+   StyleBox[
+    RowBox[{
+     SubscriptBox["F", "i"], " ", 
+     SubscriptBox["x", "i"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       SuperscriptBox[
+        SubscriptBox["x", "i"], "2"]}], ")"}]}],
+    FontColor->GrayLevel[0]]}], 
+  StyleBox[" ",
+   FontColor->GrayLevel[0]], 
+  StyleBox["=",
+   FontColor->GrayLevel[0]], 
+  StyleBox[" ",
+   FontColor->GrayLevel[0]], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{
+      StyleBox["\[Tau]",
+       FontWeight->"Plain",
+       FontSlant->"Italic"], 
+      StyleBox[".",
+       FontWeight->"Plain",
+       FontSlant->"Italic"], 
+      RowBox[{
+       StyleBox["(",
+        FontSlant->"Italic"], 
+       RowBox[{
+        StyleBox[
+         SubscriptBox["e", "i"],
+         FontWeight->"Plain",
+         FontSlant->"Plain"], 
+        StyleBox["\[Cross]",
+         FontWeight->"Plain"], 
+        StyleBox["X",
+         FontWeight->"Bold"]}], 
+       StyleBox[")",
+        FontSlant->"Italic"]}]}]}], 
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "xi"]}], 
+   StyleBox[" ",
+    FontSlant->"Italic"], "-", 
+   RowBox[{
+    RowBox[{
+     StyleBox["\[Tau]",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], 
+     StyleBox[".",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["(",
+       FontSlant->"Italic"], 
+      RowBox[{
+       StyleBox[
+        SubscriptBox["e", "i"],
+        FontSlant->"Plain"], "\[Cross]", "Y"}], 
+      StyleBox[")",
+       FontSlant->"Italic"]}]}], 
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "yi"]}], "-", 
+   RowBox[{
+    RowBox[{
+     StyleBox["\[Tau]",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], 
+     StyleBox[".",
+      FontSlant->"Italic"], 
+     RowBox[{
+      StyleBox["(",
+       FontSlant->"Italic"], 
+      RowBox[{
+       StyleBox[
+        SubscriptBox["e", "i"],
+        FontSlant->"Plain"], "\[Cross]", "Z"}], 
+      StyleBox[")",
+       FontSlant->"Italic"]}]}], 
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "zi"]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "xi"], " ", 
+    RowBox[{"X", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}]}], "+", 
+   RowBox[{
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "yi"], " ", 
+    RowBox[{"Y", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}]}], "+", 
+   RowBox[{
+    SubscriptBox[
+     StyleBox["e",
+      FontWeight->"Plain",
+      FontSlant->"Italic"], "zi"], 
+    RowBox[{"Z", ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}]}]}]}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["e", "i"], ".", 
+     RowBox[{"(", 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}], ")"}]}], "=", "0"}]}],
+  FontSlant->"Italic"], "\[IndentingNewLine]", 
+ StyleBox[
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     StyleBox[
+      SubscriptBox["\[Sum]", 
+       RowBox[{"x", ",", "y", ",", "z"}]],
+      FontSize->36], 
+     StyleBox[" ",
+      FontSize->12], 
+     StyleBox[
+      RowBox[{
+       SubscriptBox["F", "i"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox[
+          SubscriptBox["x", "i"], "2"]}], ")"}]}],
+      FontSize->12]}], ")"}], "2"],
+  FontSize->12], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{
+    StyleBox["(",
+     FontSize->12], 
+    RowBox[{
+     StyleBox[
+      SubscriptBox["\[Sum]", 
+       RowBox[{"x", ",", "y", ",", "z"}]],
+      FontSize->36], 
+     StyleBox[" ",
+      FontSize->12], 
+     StyleBox[
+      RowBox[{
+       SubscriptBox["F", "i"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox[
+          SubscriptBox["x", "i"], "2"]}], ")"}]}],
+      FontSize->12]}], 
+    StyleBox[")",
+     FontSize->12]}], "2"], 
+  StyleBox["=",
+   FontSize->36], 
+  StyleBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"X", ".", 
+       RowBox[{"(", 
+        RowBox[{"\[Tau]", "\[Cross]", 
+         SubscriptBox["e", "i"]}], ")"}]}], ")"}], "2"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"Y", ".", 
+       RowBox[{"(", 
+        RowBox[{"\[Tau]", "\[Cross]", 
+         SubscriptBox["e", "i"]}], ")"}]}], ")"}], "2"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"Z", ".", 
+       RowBox[{"(", 
+        RowBox[{"\[Tau]", "\[Cross]", 
+         SubscriptBox["e", "i"]}], ")"}]}], ")"}], "2"]}],
+   FontSize->36]}], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox["=",
+   FontSize->36], 
+  StyleBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      StyleBox["\[Sum]",
+       FontSize->36], 
+      RowBox[{"\[Tau]", "\[Cross]", 
+       SubscriptBox["e", "i"]}]}], ")"}], "2"],
+   FontSize->12]}]}], "Input",
+ CellChangeTimes->{{3.6503756648205547`*^9, 3.650375779758753*^9}, {
+  3.650375845028813*^9, 3.650375869799884*^9}, {3.650378462854145*^9, 
+  3.650378470474291*^9}, {3.65037975017904*^9, 3.6503798594607363`*^9}, {
+  3.650379961623334*^9, 3.650379997143615*^9}, {3.65038120864471*^9, 
+  3.650381217537142*^9}, {3.6538344946008177`*^9, 3.653834501958652*^9}, {
+  3.6582452160310373`*^9, 3.658245225637986*^9}, {3.705771609206862*^9, 
+  3.70577161295257*^9}},
+ ExpressionUUID -> "5e498ee8-ea2f-411d-a1b0-2ce01ef636f1"],
+
+Cell["for simplicity, we make", "Text",
+ CellChangeTimes->{3.650380326334375*^9},
+ ExpressionUUID -> "b83b44de-6185-4a7c-a64e-c02caed336cc"],
+
+Cell[TextData[{
+ "T=",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {
+       SubscriptBox["t", "11"], 
+       SubscriptBox["t", "12"], 
+       SubscriptBox["t", "13"]},
+      {
+       SubscriptBox["t", "21"], 
+       SubscriptBox["t", "22"], 
+       SubscriptBox["t", "23"]},
+      {
+       SubscriptBox["t", "31"], 
+       SubscriptBox["t", "32"], 
+       SubscriptBox["t", "33"]}
+     }], ")"}], TraditionalForm]],
+  ExpressionUUID -> "1cf38048-e088-4ce3-9bbe-86b179c8107c"],
+ "\nThen"
+}], "Text",
+ CellChangeTimes->{{3.650380178527712*^9, 3.650380199094293*^9}, {
+  3.650380249591158*^9, 3.650380328598282*^9}, {3.650380525037833*^9, 
+  3.6503805636934757`*^9}},
+ ExpressionUUID -> "1fe82386-eac4-4159-a50e-ca316f4d1a8c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Sum]", 
+    RowBox[{"x", ",", "y", ",", "z"}]], 
+   RowBox[{
+    SubscriptBox[
+     StyleBox["\[Phi]",
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{"i", ",", "k"}]], 
+    RowBox[{
+     StyleBox["(",
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{
+      StyleBox[
+       RowBox[{"-", "1"}],
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox["+",
+       FontColor->RGBColor[0, 0, 1]], 
+      SuperscriptBox[
+       SubscriptBox["x", "i"], "2"]}], 
+     StyleBox[")",
+      FontColor->RGBColor[0, 0, 1]]}], 
+    StyleBox[" ",
+     FontColor->RGBColor[0, 0, 1]], 
+    RowBox[{
+     StyleBox["(",
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{
+      StyleBox[
+       RowBox[{"-", "1"}],
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox["+",
+       FontColor->RGBColor[0, 0, 1]], 
+      SuperscriptBox[
+       SubscriptBox["x", "k"], "2"]}], 
+     StyleBox[")",
+      FontColor->RGBColor[0, 0, 1]]}]}]}], 
+  StyleBox["=",
+   FontColor->RGBColor[0, 0, 1]], 
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"[", 
+      RowBox[{"T", 
+       RowBox[{".", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["e", "k"], "\[Cross]", "X"}], ")"}]}]}], "]"}], ".", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["e", "i"], "\[Cross]", "X"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"[", 
+      RowBox[{"T", 
+       RowBox[{".", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["e", "k"], "\[Cross]", "Y"}], ")"}]}]}], "]"}], ".", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["e", "i"], "\[Cross]", "Y"}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"[", 
+      RowBox[{"T", ".", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["e", "k"], "\[Cross]", "Z"}], ")"}]}], "]"}], ".", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["e", "i"], "\[Cross]", "Z"}], ")"}]}]}],
+   FontColor->RGBColor[0, 0, 1]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  StyleBox["=",
+   FontColor->RGBColor[0, 0, 1]], 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["e", "i"], ".", 
+    RowBox[{"{", 
+     StyleBox[
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{"T", 
+         RowBox[{".", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["e", "k"], "\[Cross]", "X"}], ")"}]}]}], "]"}], 
+       "\[Cross]", "X"}],
+      FontColor->RGBColor[0, 0, 1]], "}"}]}], "+", 
+   RowBox[{
+    SubscriptBox["e", "i"], ".", 
+    RowBox[{"{", 
+     StyleBox[
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{"T", 
+         RowBox[{".", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["e", "k"], "\[Cross]", "Y"}], ")"}]}]}], "]"}], 
+       "\[Cross]", "Y"}],
+      FontColor->RGBColor[0, 0, 1]], "}"}]}], "+", 
+   RowBox[{
+    SubscriptBox["e", "i"], ".", 
+    RowBox[{"{", 
+     StyleBox[
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{"T", 
+         RowBox[{".", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["e", "k"], "\[Cross]", "Z"}], ")"}]}]}], "]"}], 
+       "\[Cross]", "Z"}],
+      FontColor->RGBColor[0, 0, 1]], "}"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   SubscriptBox["e", 
+    RowBox[{"i", "."}]], 
+   RowBox[{"{", 
+    RowBox[{
+     FormBox[
+      RowBox[{"(", GridBox[{
+         {
+          RowBox[{
+           SubscriptBox["t", "22"], "+", 
+           SubscriptBox["t", "33"]}], 
+          RowBox[{"-", 
+           SubscriptBox["t", "21"]}], 
+          RowBox[{"-", 
+           SubscriptBox["t", "31"]}]},
+         {
+          RowBox[{"-", 
+           SubscriptBox["t", "12"]}], 
+          RowBox[{
+           SubscriptBox["t", "11"], "+", 
+           SubscriptBox["t", "33"]}], 
+          RowBox[{"-", 
+           SubscriptBox["t", "32"]}]},
+         {
+          RowBox[{"-", 
+           SubscriptBox["t", "13"]}], 
+          RowBox[{"-", 
+           SubscriptBox["t", "23"]}], 
+          RowBox[{
+           SubscriptBox["t", "11"], "+", 
+           SubscriptBox["t", "22"]}]}
+        }], ")"}],
+      TraditionalForm], ".", 
+     SubscriptBox["e", "k"]}], "}"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   SubscriptBox["e", "i"], ".", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"Transpost", "[", "T", "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"Trace", "[", "T", "]"}], "*", 
+        RowBox[{"IdentityMatrix", "[", "3", "]"}]}]}], ")"}], ".", 
+     SubscriptBox["e", "k"]}], "}"}]}]}]}], "Input",
+ CellChangeTimes->{{3.650380345591329*^9, 3.650380519055841*^9}, {
+   3.650380571681891*^9, 3.6503806345478373`*^9}, {3.650380669337949*^9, 
+   3.650380754632457*^9}, {3.650380879783431*^9, 3.650380886109272*^9}, 
+   3.650381219353862*^9},
+ ExpressionUUID -> "b12fac51-cde5-4718-9e60-3cae719adeac"],
+
+Cell["so", "Text",
+ CellChangeTimes->{{3.650380959514988*^9, 3.650380960243039*^9}},
+ ExpressionUUID -> "e4dbd848-fa5a-4946-b84f-d3c9cba5d517"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Sum]", 
+    RowBox[{"x", ",", "y", ",", "z"}]], 
+   SubscriptBox["A", "EE"]}], 
+  StyleBox["=",
+   FontColor->GrayLevel[0]], 
+  RowBox[{
+   SubscriptBox["\[Sum]", 
+    RowBox[{"x", ",", "y", ",", "z"}]], 
+   StyleBox[
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "4"]}], " ", 
+     SuperscriptBox["\[Beta]", "4"], " ", 
+     SuperscriptBox["\[Micro]", "2"], " ", 
+     RowBox[{"Variance", "[", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "N"], 
+       RowBox[{
+        SubscriptBox["F", "i"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SuperscriptBox[
+           SubscriptBox["x", "i"], "2"]}], ")"}]}]}], "]"}]}],
+    FontColor->GrayLevel[0]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["+",
+     FontColor->GrayLevel[0]], 
+    RowBox[{
+     SubscriptBox["\[Sum]", 
+      RowBox[{"x", ",", "y", ",", "z"}]], 
+     StyleBox[
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       SuperscriptBox["\[Beta]", "3"], " ", 
+       SuperscriptBox["\[Micro]", "2"]}],
+      FontColor->RGBColor[0, 0, 1]]}]}], 
+   StyleBox["<",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[" ",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "N"],
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{
+      StyleBox[
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "1"}], "N"],
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox[" ",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{
+       SubscriptBox[
+        StyleBox["\[Phi]",
+         FontColor->RGBColor[0, 0, 1]], 
+        RowBox[{"i", ",", "k"}]], 
+       RowBox[{
+        StyleBox["(",
+         FontColor->RGBColor[0, 0, 1]], 
+        RowBox[{
+         StyleBox[
+          RowBox[{"-", "1"}],
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["+",
+          FontColor->RGBColor[0, 0, 1]], 
+         SuperscriptBox[
+          SubscriptBox["x", "i"], "2"]}], 
+        StyleBox[")",
+         FontColor->RGBColor[0, 0, 1]]}], 
+       StyleBox[" ",
+        FontColor->RGBColor[0, 0, 1]], 
+       RowBox[{
+        StyleBox["(",
+         FontColor->RGBColor[0, 0, 1]], 
+        RowBox[{
+         StyleBox[
+          RowBox[{"-", "1"}],
+          FontColor->RGBColor[0, 0, 1]], 
+         StyleBox["+",
+          FontColor->RGBColor[0, 0, 1]], 
+         SuperscriptBox[
+          SubscriptBox["x", "k"], "2"]}], 
+        StyleBox[")",
+         FontColor->RGBColor[0, 0, 1]]}]}]}]}],
+    FontColor->GrayLevel[0]], 
+   StyleBox[">",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox["\[IndentingNewLine]",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       SubscriptBox["\[Sum]", 
+        RowBox[{"x", ",", "y", ",", "z"}]], 
+       RowBox[{
+        FractionBox["N", "3"], " ", 
+        SuperscriptBox["\[Beta]", "2"], " ", 
+        SuperscriptBox["\[Micro]", "2"]}]}]}], "-", 
+     RowBox[{
+      SubscriptBox["\[Sum]", 
+       RowBox[{"x", ",", "y", ",", "z"}]], 
+      RowBox[{
+       FractionBox["2", "3"], " ", 
+       SuperscriptBox["\[Beta]", "3"], " ", 
+       SuperscriptBox["\[Micro]", "2"]}]}]}],
+    FontColor->GrayLevel[0]], 
+   StyleBox[" ",
+    FontColor->GrayLevel[0]], 
+   StyleBox["<",
+    FontColor->GrayLevel[0]], 
+   RowBox[{
+    StyleBox[
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"],
+     FontColor->RGBColor[0, 0, 1]], 
+    StyleBox[" ",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      SubscriptBox["F", "i"], " ", 
+      SubscriptBox["x", "i"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SuperscriptBox[
+         SubscriptBox["x", "i"], "2"]}], ")"}]}],
+     FontColor->GrayLevel[0]]}], 
+   StyleBox[">",
+    FontColor->GrayLevel[0]]}], 
+  StyleBox[";",
+   FontColor->GrayLevel[0]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     SubscriptBox["\[Sum]", 
+      RowBox[{"x", ",", "y", ",", "z"}]], 
+     SubscriptBox["A", "EE"]}],
+    FontSize->16,
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox["=",
+    FontSize->16,
+    FontColor->GrayLevel[0]], 
+   RowBox[{
+    StyleBox["=",
+     FontSize->24,
+     FontColor->GrayLevel[0]], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"-", 
+       FractionBox["1", "4"]}],
+      FontSize->24,
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ",
+      FontSize->24,
+      FontColor->GrayLevel[0]], 
+     StyleBox[
+      SuperscriptBox["\[Beta]", "4"],
+      FontSize->24,
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ",
+      FontSize->24,
+      FontColor->GrayLevel[0]], 
+     StyleBox[
+      SuperscriptBox["\[Micro]", "2"],
+      FontSize->24,
+      FontColor->GrayLevel[0]], 
+     RowBox[{
+      StyleBox["(",
+       FontSize->24,
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["<",
+         FontSize->24,
+         FontColor->GrayLevel[0]], 
+        StyleBox[
+         RowBox[{
+          StyleBox[
+           UnderoverscriptBox["\[Sum]", 
+            RowBox[{"i", "=", "1"}], "N"],
+           FontColor->GrayLevel[0]], 
+          RowBox[{
+           StyleBox[
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1"}], "}"}],
+            FontColor->GrayLevel[0]], 
+           StyleBox[".",
+            FontColor->GrayLevel[0]], 
+           RowBox[{"\:ff08", 
+            RowBox[{
+             StyleBox["\[Tau]",
+              FontColor->GrayLevel[0]], 
+             StyleBox["\[Cross]",
+              FontColor->GrayLevel[0]], 
+             SubscriptBox[
+              StyleBox["e",
+               FontColor->GrayLevel[0]], "i"]}], "\:ff09"}]}]}],
+         FontSize->24], 
+        StyleBox[
+         SuperscriptBox[
+          StyleBox[">",
+           FontColor->GrayLevel[0]], "2"],
+         FontSize->24], 
+        RowBox[{
+         StyleBox["-",
+          FontSize->24], 
+         RowBox[{
+          StyleBox["<",
+           FontSize->24], 
+          SuperscriptBox[
+           RowBox[{
+            StyleBox["(",
+             FontSize->24], 
+            RowBox[{
+             StyleBox[
+              UnderoverscriptBox["\[Sum]", 
+               RowBox[{"i", "=", "1"}], "N"],
+              FontSize->24,
+              FontColor->GrayLevel[0]], 
+             RowBox[{"\[Tau]", "\[Cross]", 
+              SubscriptBox["e", "i"]}]}], ")"}], "2"], 
+          StyleBox[">",
+           FontSize->24]}]}]}],
+       FontSize->12,
+       FontColor->RGBColor[1, 0, 0]], 
+      StyleBox[")",
+       FontSize->24,
+       FontColor->GrayLevel[0]]}]}]}]}], 
+  StyleBox[" ",
+   FontSize->10,
+   FontColor->RGBColor[1, 0, 0]]}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    StyleBox["+",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{
+      FractionBox["1", "4"], " ", 
+      SuperscriptBox["\[Beta]", "3"], " ", 
+      SuperscriptBox["\[Micro]", "2"]}],
+     FontColor->RGBColor[0, 0, 1]]}], 
+   StyleBox["<",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[" ",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "N"],
+      FontColor->RGBColor[0, 0, 1]], 
+     RowBox[{
+      StyleBox[
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"k", "=", "1"}], "N"],
+       FontColor->RGBColor[0, 0, 1]], 
+      StyleBox[" ",
+       FontColor->RGBColor[0, 0, 1]], 
+      RowBox[{
+       SubscriptBox["e", "i"], ".", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Transpost", "[", "T", "]"}]}], "+", 
+           RowBox[{
+            RowBox[{"Trace", "[", "T", "]"}], "*", "I"}]}], ")"}], ".", 
+         SubscriptBox["e", "k"]}], "}"}]}]}]}],
+    FontColor->RGBColor[1, 0, 0]], 
+   StyleBox[">",
+    FontColor->RGBColor[0, 0, 1]], 
+   StyleBox[
+    RowBox[{
+     RowBox[{"-", "N"}], " ", 
+     SuperscriptBox["\[Beta]", "2"], " ", 
+     SuperscriptBox["\[Micro]", "2"]}],
+    FontColor->GrayLevel[0]]}],
+  FontSize->16]}], "Input",
+ CellChangeTimes->{{3.6503809616799393`*^9, 3.650380965668293*^9}, {
+   3.6503809988207293`*^9, 3.6503810993044567`*^9}, {3.650381164145002*^9, 
+   3.6503811992674417`*^9}, {3.6503812573554564`*^9, 3.650381294879019*^9}, {
+   3.650899377174328*^9, 3.6508994038318777`*^9}, {3.653831584176167*^9, 
+   3.65383159562709*^9}, 3.65671316697727*^9, {3.6573116017192593`*^9, 
+   3.65731160668616*^9}},
+ ExpressionUUID -> "c529da97-8448-407a-8745-eb1d1bb60673"],
+
+Cell[TextData[{
+ "which I is identical matrix. Also we can prove ",
+ Cell[BoxData[
+  RowBox[{" ", 
+   RowBox[{
+    RowBox[{"<", " ", 
+     RowBox[{
+      SubscriptBox["\[Sum]", 
+       RowBox[{"x", ",", "y", ",", "z"}]], " ", 
+      RowBox[{
+       SubscriptBox["F", "i"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SuperscriptBox[
+          SubscriptBox["x", "i"], "2"]}], ")"}]}]}], ">"}], " ", "="}]}]], 
+  "Input",
+  ExpressionUUID -> "19488b8a-d8f2-48e8-a047-892306060196"],
+ "0, please see proof below; "
+}], "Text",
+ CellChangeTimes->{{3.6503816052382803`*^9, 3.650381605430595*^9}, {
+   3.650899411449771*^9, 3.650899455679305*^9}, 3.7034349346860447`*^9},
+ ExpressionUUID -> "bba48f56-6fa9-45fa-bc1f-46a39d91f81c"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["F and phi", "Subchapter",
+ CellChangeTimes->{{3.7111953066920156`*^9, 3.711195308587717*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.71119537551192*^9, 3.711195382680971*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ei", "=", 
+   RowBox[{"{", 
+    RowBox[{"exi", ",", "eyi", ",", "ezi"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ej", "=", 
+   RowBox[{"{", 
+    RowBox[{"exj", ",", "eyj", ",", "ezj"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.711195323491392*^9, 3.7111953402103357`*^9}}],
+
+Cell[TextData[{
+ "dejdxj the xj here is ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Theta]", "xj"], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.6948632879032893`*^9, 3.6948633021719522`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dejdxj", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "ezj"}], ",", "eyj"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dejdyj", "=", 
+   RowBox[{"{", 
+    RowBox[{"ezj", ",", "0", ",", 
+     RowBox[{"-", "exj"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dejdzj", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "eyj"}], ",", "exj", ",", "0"}], "}"}]}], ";"}]}], "Input"],
+
+Cell["energy", "Text",
+ CellChangeTimes->{{3.7111953498176947`*^9, 3.711195352561606*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"u", "=", 
+  RowBox[{
+   RowBox[{"-", "J"}], " ", 
+   RowBox[{"ei", ".", "ej"}]}]}]], "Input",
+ CellChangeTimes->{{3.7111953542152433`*^9, 3.711195369745373*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"exi", " ", "exj"}], "+", 
+     RowBox[{"eyi", " ", "eyj"}], "+", 
+     RowBox[{"ezi", " ", "ezj"}]}], ")"}]}], " ", "J"}]], "Output",
+ CellChangeTimes->{3.711195422636468*^9, 3.7111959708499947`*^9, 
+  3.7111960065417957`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "see page 333 in \[OpenCurlyDoubleQuote]",
+ StyleBox["computer simulation of liquide\[CloseCurlyDoubleQuote]",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.71119549325177*^9, 3.711195522968213*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[Tau]", "=", 
+  RowBox[{"-", 
+   RowBox[{"ei", "\[Cross]", 
+    RowBox[{"Grad", "[", 
+     RowBox[{"u", ",", "ei"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"J", " ", 
+    RowBox[{"ei", "\[Cross]", "ej"}]}], "-", "%"}], "//", 
+  "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.711195396079422*^9, 3.711195467937451*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "eyj"}], " ", "ezi", " ", "J"}], "+", 
+    RowBox[{"eyi", " ", "ezj", " ", "J"}]}], ",", 
+   RowBox[{
+    RowBox[{"exj", " ", "ezi", " ", "J"}], "-", 
+    RowBox[{"exi", " ", "ezj", " ", "J"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "exj"}], " ", "eyi", " ", "J"}], "+", 
+    RowBox[{"exi", " ", "eyj", " ", "J"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.711195370299128*^9, 3.7111953862043962`*^9}, {
+   3.711195417218318*^9, 3.711195422648609*^9}, {3.7111954539753323`*^9, 
+   3.7111954682156067`*^9}, 3.711195970865295*^9, 3.711196006556098*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.711195370299128*^9, 3.7111953862043962`*^9}, {
+   3.711195417218318*^9, 3.711195422648609*^9}, {3.7111954539753323`*^9, 
+   3.7111954682156067`*^9}, 3.711195970865295*^9, 3.7111960065575743`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["\[Theta]i", TraditionalForm]]],
+ " is the angle rotate to z axis"
+}], "Text",
+ CellChangeTimes->{{3.694782814789783*^9, 3.694782835676613*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"deid\[Theta]i", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"exi", "*", 
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "i"], "]"}]}], ",", 
+     RowBox[{"eyi", "*", 
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "i"], "]"}]}], ",", 
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       SubscriptBox["\[Theta]", "i"], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d2eid\[Theta]i2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "exi"}], ",", "eyi", ",", "ezi"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dejd\[Theta]j", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"exj", "*", 
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "j"], "]"}]}], ",", 
+     RowBox[{"eyj", "*", 
+      RowBox[{"Cot", "[", 
+       SubscriptBox["\[Theta]", "j"], "]"}]}], ",", 
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       SubscriptBox["\[Theta]", "j"], "]"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.645271998246664*^9, 3.645272005525475*^9}, 
+   3.645368514993124*^9, {3.6453685783853083`*^9, 3.645368607781528*^9}, {
+   3.6453686864131393`*^9, 3.645368693505871*^9}, {3.6453764280790033`*^9, 
+   3.645376484584111*^9}, 3.69361867247334*^9}],
+
+Cell[TextData[{
+ "Note\:ff1a",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["F", 
+    RowBox[{"i", " "}]], "=", 
+   RowBox[{
+    RowBox[{"-", " ", 
+     FractionBox["du", "dx"]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", " ", 
+       FractionBox["du", "d\[Theta]"]}], 
+      FractionBox["d\[Theta]", "dx"]}], "=", 
+     RowBox[{
+      FractionBox["du", "d\[Theta]"], " ", 
+      FractionBox["1", 
+       RowBox[{"Sin", "[", "\[Theta]", "]"}]]}]}]}]}]], "Input",
+  CellChangeTimes->{{3.650372199987965*^9, 3.65037224926254*^9}, {
+    3.65037228928633*^9, 3.6503723192499113`*^9}, {3.650375608344899*^9, 
+    3.650375618032833*^9}, {3.65383447517307*^9, 3.653834479940592*^9}, 
+    3.6573103612273073`*^9},
+  ExpressionUUID -> "164a1f71-f015-41b7-bee1-87212eb0ece5"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Phi]ij", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["d", "2"], "u"}], "dxidxj"], "="}]}], 
+   TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.7111957224021797`*^9, 3.7111957245719*^9}, {
+   3.711195762324065*^9, 3.711195767288945*^9}, 3.7111958013846493`*^9, {
+   3.711195904530706*^9, 3.7111959477475653`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"F", "=", 
+  RowBox[{
+   RowBox[{"-", "J"}], " ", 
+   RowBox[{
+    RowBox[{"deid\[Theta]i", ".", "ej"}], "/", 
+    RowBox[{"Sin", "[", 
+     SubscriptBox["\[Theta]", "i"], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]ij", "=", 
+  RowBox[{"J", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"deid\[Theta]i", ".", "dejd\[Theta]j"}], "/", 
+     RowBox[{"Sin", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}]}], "/", 
+    RowBox[{"Sin", "[", 
+     SubscriptBox["\[Theta]", "j"], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Phi]ii", "=", 
+  RowBox[{"J", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"d2eid\[Theta]i2", ".", "ej"}], "/", 
+     RowBox[{"Sin", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}]}], "/", 
+    RowBox[{"Sin", "[", 
+     SubscriptBox["\[Theta]", "i"], "]"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.7111956971006927`*^9, 3.7111956977717752`*^9}, {
+  3.7111958271419086`*^9, 3.711195885875553*^9}, {3.711195954841556*^9, 
+  3.711196003527071*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "J"}], " ", 
+  RowBox[{"Csc", "[", 
+   SubscriptBox["\[Theta]", "i"], "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"exi", " ", "exj", " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}]}], "+", 
+    RowBox[{"eyi", " ", "eyj", " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}]}], "-", 
+    RowBox[{"ezj", " ", 
+     RowBox[{"Sin", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.711195873763773*^9, 3.711195970884494*^9, {3.711196004229947*^9, 
+   3.71119600658048*^9}}],
+
+Cell[BoxData[
+ RowBox[{"J", " ", 
+  RowBox[{"Csc", "[", 
+   SubscriptBox["\[Theta]", "i"], "]"}], " ", 
+  RowBox[{"Csc", "[", 
+   SubscriptBox["\[Theta]", "j"], "]"}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"exi", " ", "exj", " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}], " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "j"], "]"}]}], "+", 
+    RowBox[{"eyi", " ", "eyj", " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}], " ", 
+     RowBox[{"Cot", "[", 
+      SubscriptBox["\[Theta]", "j"], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      SubscriptBox["\[Theta]", "i"], "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      SubscriptBox["\[Theta]", "j"], "]"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.711195873763773*^9, 3.711195970884494*^9, {3.711196004229947*^9, 
+   3.711196006581646*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "exi"}], " ", "exj"}], "+", 
+    RowBox[{"eyi", " ", "eyj"}], "+", 
+    RowBox[{"ezi", " ", "ezj"}]}], ")"}], " ", "J", " ", 
+  SuperscriptBox[
+   RowBox[{"Csc", "[", 
+    SubscriptBox["\[Theta]", "i"], "]"}], "2"]}]], "Output",
+ CellChangeTimes->{
+  3.711195873763773*^9, 3.711195970884494*^9, {3.711196004229947*^9, 
+   3.711196006582614*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1366, 671},
+WindowMargins->{{527, -527}, {0, 37}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 100, 1, 95, "Subchapter"],
+Cell[683, 25, 142, 2, 67, "Input"],
+Cell[828, 29, 975, 27, 199, "Input"],
+Cell[1806, 58, 908, 23, 112, "Input"],
+Cell[CellGroupData[{
+Cell[2739, 85, 364, 9, 67, "Input"],
+Cell[3106, 96, 1267, 32, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4410, 133, 293, 6, 67, "Input"],
+Cell[4706, 141, 506, 13, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5249, 159, 341, 8, 67, "Input"],
+Cell[5593, 169, 467, 12, 105, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6109, 187, 107, 1, 69, "Subchapter"],
+Cell[CellGroupData[{
+Cell[6241, 192, 739, 23, 112, "Input"],
+Cell[6983, 217, 278, 5, 105, "Output"],
+Cell[7264, 224, 459, 12, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7760, 241, 414, 11, 112, "Input"],
+Cell[8177, 254, 392, 10, 105, "Output"],
+Cell[8572, 266, 482, 13, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9091, 284, 252, 7, 67, "Input"],
+Cell[9346, 293, 160, 2, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9543, 300, 876, 26, 202, "Input"],
+Cell[10422, 328, 405, 11, 105, "Output"],
+Cell[10830, 341, 848, 25, 105, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[11727, 372, 93, 1, 69, "Subchapter"],
+Cell[CellGroupData[{
+Cell[11845, 377, 287, 6, 48, "Input"],
+Cell[12135, 385, 1440, 45, 121, "Output"]
+}, Open  ]],
+Cell[13590, 433, 112, 1, 49, "Text"],
+Cell[CellGroupData[{
+Cell[13727, 438, 603, 19, 74, "Input"],
+Cell[14333, 459, 251, 7, 67, "Output"]
+}, Open  ]],
+Cell[14599, 469, 152, 2, 49, "Text"],
+Cell[14754, 473, 1117, 35, 74, "Input"],
+Cell[15874, 510, 2356, 77, 143, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18267, 592, 226, 3, 95, "Subchapter"],
+Cell[18496, 597, 950, 21, 166, "Text"],
+Cell[CellGroupData[{
+Cell[19471, 622, 720, 20, 118, "Input"],
+Cell[20194, 644, 160, 4, 105, "Output"]
+}, Open  ]],
+Cell[20369, 651, 821, 24, 225, "Text"],
+Cell[21193, 677, 206, 2, 73, "Text"],
+Cell[CellGroupData[{
+Cell[21424, 683, 941, 33, 112, "Input"],
+Cell[22368, 718, 208, 6, 105, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22613, 729, 1145, 40, 264, "Input"],
+Cell[23761, 771, 234, 7, 105, "Output"]
+}, Open  ]],
+Cell[24010, 781, 213, 3, 73, "Text"],
+Cell[24226, 786, 3415, 105, 331, "Input"],
+Cell[27644, 893, 225, 3, 73, "Text"],
+Cell[CellGroupData[{
+Cell[27894, 900, 1628, 57, 237, "Input"],
+Cell[29525, 959, 233, 8, 105, "Output"]
+}, Open  ]],
+Cell[29773, 970, 862, 24, 171, "Text"],
+Cell[30638, 996, 8056, 305, 1263, "Input"],
+Cell[38697, 1303, 140, 2, 73, "Text"],
+Cell[38840, 1307, 737, 24, 202, "Text"],
+Cell[39580, 1333, 4771, 167, 319, "Input"],
+Cell[44354, 1502, 143, 2, 73, "Text"],
+Cell[44500, 1506, 8602, 297, 717, "Input"],
+Cell[53105, 1805, 763, 22, 79, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[53905, 1832, 99, 1, 69, "Subchapter"],
+Cell[54007, 1835, 141, 2, 53, "Input"],
+Cell[54151, 1839, 340, 10, 82, "Input"],
+Cell[54494, 1851, 204, 6, 53, "Text"],
+Cell[54701, 1859, 475, 16, 115, "Input"],
+Cell[55179, 1877, 90, 1, 49, "Text"],
+Cell[CellGroupData[{
+Cell[55294, 1882, 185, 5, 48, "Input"],
+Cell[55482, 1889, 310, 9, 48, "Output"]
+}, Open  ]],
+Cell[55807, 1901, 227, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[56059, 1910, 374, 11, 82, "Input"],
+Cell[56436, 1923, 647, 16, 48, "Output"],
+Cell[57086, 1941, 301, 5, 48, "Output"]
+}, Open  ]],
+Cell[57402, 1949, 185, 5, 49, "Text"],
+Cell[57590, 1956, 1300, 37, 117, "Input"],
+Cell[58893, 1995, 1168, 35, 114, "Text"],
+Cell[CellGroupData[{
+Cell[60086, 2034, 998, 28, 118, "Input"],
+Cell[61087, 2064, 614, 18, 48, "Output"],
+Cell[61704, 2084, 883, 25, 51, "Output"],
+Cell[62590, 2111, 428, 13, 48, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

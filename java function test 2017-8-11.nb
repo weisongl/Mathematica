@@ -1,0 +1,1135 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     49382,       1127]
+NotebookOptionsPosition[     46198,       1036]
+NotebookOutlinePosition[     46564,       1052]
+CellTagsIndexPosition[     46521,       1049]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"t1", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"0.5`16", "*", 
+       RowBox[{"1.5`16", "^", "n"}]}], ")"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7114701488213577`*^9, 3.711470148835381*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<assertEquals(\>\"", ",", 
+     RowBox[{"N", "[", 
+      RowBox[{
+       RowBox[{"LegendreP", "[", 
+        RowBox[{"n", ",", "x"}], "]"}], ",", "15"}], "]"}], ",", 
+     "\"\<,SpecialFunctions.calcLegendrePolynomial(\>\"", ",", "n", ",", 
+     "\"\<,\>\"", ",", 
+     RowBox[{"N", "[", 
+      RowBox[{"x", ",", "15"}], "]"}], ",", "\"\<),1E-13);\>\""}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "2"}], ",", "2", ",", 
+     RowBox[{"1", "/", "4"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.711470133767407*^9, 3.711470274859705*^9}, {
+  3.711470306026496*^9, 3.711470315691399*^9}, {3.711470354494729*^9, 
+  3.711470369369266*^9}, {3.711470402583164*^9, 3.7114704064502897`*^9}, {
+  3.7114704477247553`*^9, 3.7114704598131227`*^9}, {3.7114704999289703`*^9, 
+  3.711470538057262*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "2.`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -2.`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539258466*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "5.5`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 5.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", -2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053925941*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "17.`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -17.`15., ",SpecialFunctions.calcLegendrePolynomial(", 3, 
+   ",", -2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539260211*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "55.375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "2.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 55.375`15., ",SpecialFunctions.calcLegendrePolynomial(", 4,
+    ",", -2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539260913*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1.75`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -1.75`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539261631*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "4.09375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 4.09375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", -1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539262307*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "10.7734375`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -10.7734375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", -1.75`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392630167`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "29.92333984375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 29.92333984375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -1.75`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053926369*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1.5`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -1.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539264367*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "2.875`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 2.875`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", -1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539265108*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "6.1875`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -6.1875`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   3, ",", -1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539265779*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "14.0859375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 14.0859375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539266448*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1.25`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -1.25`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539267117*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.84375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.84375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", -1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392678223`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.0078125`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -3.0078125`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", -1.25`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539268497*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "5.19677734375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 5.19677734375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -1.25`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539269176*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539269918*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", -1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539270632*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 3, 
+   ",", -1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539271364*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "1.`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 4, 
+   ",", -1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539272099*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.75`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.75`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539272809*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.34375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.34375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", -0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539273982*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.0703125`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.0703125`15., ",SpecialFunctions.calcLegendrePolynomial(",
+    3, ",", -0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539274756*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.35009765625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.75`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.35009765625`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -0.75`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392755213`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392762423`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.125`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.125`15., ",SpecialFunctions.calcLegendrePolynomial(", 2,
+    ",", -0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539276965*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.4375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.4375`15., ",SpecialFunctions.calcLegendrePolynomial(", 3,
+    ",", -0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053927767*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.2890625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.2890625`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539278365*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.25`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.25`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", -0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539279055*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.40625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.40625`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", -0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539279789*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.3359375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.3359375`15., ",SpecialFunctions.calcLegendrePolynomial(",
+    3, ",", -0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392805243`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.15771484375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "0.25`15."}], "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.15771484375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", -0.25`15., 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539281248*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0, ",SpecialFunctions.calcLegendrePolynomial(", 1, ",", 0, 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539281962*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.5`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", 0, "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539282626*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0, ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", 0, 
+   "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539283305*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.375`15., ",SpecialFunctions.calcLegendrePolynomial(", 4, 
+   ",", 0, "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392839613`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.25`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.25`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539284618*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.40625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.40625`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", 0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539285301*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.3359375`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.3359375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", 0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539285982*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.15771484375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.15771484375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 0.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392866488`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.5`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", 0.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539287333*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.125`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", -0.125`15., ",SpecialFunctions.calcLegendrePolynomial(", 2,
+    ",", 0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539288018*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.4375`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", -0.4375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   3, ",", 0.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539288723*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.2890625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", -0.2890625`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 0.5`15., "),1E-13);"],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392894287`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.75`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.75`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539290161*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "0.34375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 0.34375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", 0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539290895*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.0703125`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.0703125`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", 0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392916117`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "0.35009765625`15."}], 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "0.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", -0.35009765625`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 0.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539292343*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539293043*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", 1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539293724*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 3, 
+   ",", 1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053929443*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.`15., ",SpecialFunctions.calcLegendrePolynomial(", 4, 
+   ",", 1.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539295129*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.25`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.25`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539295816*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.84375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.84375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", 1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539296521*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "3.0078125`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 3.0078125`15., ",SpecialFunctions.calcLegendrePolynomial(",
+    3, ",", 1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539297225*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "5.19677734375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.25`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 5.19677734375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 1.25`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.7114705392979317`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.5`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", 1.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539298637*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "2.875`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", 2.875`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", 1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539299361*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "6.1875`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", 6.1875`15., ",SpecialFunctions.calcLegendrePolynomial(", 3,
+    ",", 1.5`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539300098*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "14.0859375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.5`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  
+  SequenceForm[
+  "assertEquals(", 14.0859375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 1.5`15., "),1E-13);"],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053930083*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "1.75`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 1.75`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539301586*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "4.09375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 4.09375`15., ",SpecialFunctions.calcLegendrePolynomial(", 
+   2, ",", 1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539302322*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "10.7734375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 10.7734375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 3, ",", 1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539303059*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "29.92333984375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "1.75`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 29.92333984375`15., 
+   ",SpecialFunctions.calcLegendrePolynomial(", 4, ",", 1.75`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.71147053930376*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "2.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 2.`15., ",SpecialFunctions.calcLegendrePolynomial(", 1, 
+   ",", 2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539304474*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "5.5`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "2", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 5.5`15., ",SpecialFunctions.calcLegendrePolynomial(", 2, 
+   ",", 2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539305181*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "17.`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 17.`15., ",SpecialFunctions.calcLegendrePolynomial(", 3, 
+   ",", 2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539305879*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"assertEquals(\"\>", "\[InvisibleSpace]", "55.375`15.", 
+   "\[InvisibleSpace]", "\<\",SpecialFunctions.calcLegendrePolynomial(\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\",\"\>", 
+   "\[InvisibleSpace]", "2.`15.", "\[InvisibleSpace]", "\<\"),1E-13);\"\>"}],
+  SequenceForm[
+  "assertEquals(", 55.375`15., ",SpecialFunctions.calcLegendrePolynomial(", 4,
+    ",", 2.`15., "),1E-13);"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.711470335523587*^9, 3.711470370425683*^9}, 
+   3.7114704080463657`*^9, {3.7114704835604477`*^9, 3.711470539306566*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cos", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox["3", "2"], "Pi"}], "+", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.711471681739072*^9, 3.711471710630822*^9}, 
+   3.711471787222213*^9}],
+
+Cell[BoxData[
+ RowBox[{"Sin", "[", "x", "]"}]], "Output",
+ CellChangeTimes->{{3.711471697680414*^9, 3.711471711374641*^9}, 
+   3.711471787731811*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 671},
+WindowMargins->{{236, Automatic}, {-46, 83}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 352, 10, 45, "Input"],
+Cell[CellGroupData[{
+Cell[935, 34, 982, 23, 69, "Input"],
+Cell[CellGroupData[{
+Cell[1942, 61, 654, 13, 31, "Print"],
+Cell[2599, 76, 635, 12, 31, "Print"],
+Cell[3237, 90, 656, 13, 31, "Print"],
+Cell[3896, 105, 642, 12, 31, "Print"],
+Cell[4541, 119, 662, 13, 31, "Print"],
+Cell[5206, 134, 648, 12, 31, "Print"],
+Cell[5857, 148, 680, 14, 31, "Print"],
+Cell[6540, 164, 665, 13, 31, "Print"],
+Cell[7208, 179, 658, 13, 31, "Print"],
+Cell[7869, 194, 642, 12, 31, "Print"],
+Cell[8514, 208, 664, 13, 31, "Print"],
+Cell[9181, 223, 652, 12, 31, "Print"],
+Cell[9836, 237, 662, 13, 31, "Print"],
+Cell[10501, 252, 650, 12, 31, "Print"],
+Cell[11154, 266, 676, 14, 31, "Print"],
+Cell[11833, 282, 664, 13, 31, "Print"],
+Cell[12500, 297, 654, 13, 31, "Print"],
+Cell[13157, 312, 634, 12, 31, "Print"],
+Cell[13794, 326, 654, 13, 31, "Print"],
+Cell[14451, 341, 634, 12, 31, "Print"],
+Cell[15088, 355, 662, 13, 31, "Print"],
+Cell[15753, 370, 648, 12, 31, "Print"],
+Cell[16404, 384, 652, 12, 31, "Print"],
+Cell[17059, 398, 686, 14, 31, "Print"],
+Cell[17748, 414, 660, 13, 31, "Print"],
+Cell[18411, 429, 662, 13, 31, "Print"],
+Cell[19076, 444, 643, 12, 31, "Print"],
+Cell[19722, 458, 670, 13, 31, "Print"],
+Cell[20395, 473, 662, 13, 31, "Print"],
+Cell[21060, 488, 668, 13, 31, "Print"],
+Cell[21731, 503, 654, 12, 31, "Print"],
+Cell[22388, 517, 664, 13, 31, "Print"],
+Cell[23055, 532, 594, 11, 31, "Print"],
+Cell[23652, 545, 626, 12, 31, "Print"],
+Cell[24281, 559, 594, 11, 31, "Print"],
+Cell[24878, 572, 612, 11, 31, "Print"],
+Cell[25493, 585, 622, 11, 31, "Print"],
+Cell[26118, 598, 648, 12, 31, "Print"],
+Cell[26769, 612, 652, 12, 31, "Print"],
+Cell[27424, 626, 642, 11, 31, "Print"],
+Cell[28069, 639, 621, 12, 31, "Print"],
+Cell[28693, 653, 645, 13, 31, "Print"],
+Cell[29341, 668, 647, 13, 31, "Print"],
+Cell[29991, 683, 658, 14, 31, "Print"],
+Cell[30652, 699, 622, 11, 31, "Print"],
+Cell[31277, 712, 628, 11, 31, "Print"],
+Cell[31908, 725, 654, 12, 31, "Print"],
+Cell[32565, 739, 660, 12, 31, "Print"],
+Cell[33228, 753, 614, 11, 31, "Print"],
+Cell[33845, 766, 614, 11, 31, "Print"],
+Cell[34462, 779, 613, 11, 31, "Print"],
+Cell[35078, 792, 614, 11, 31, "Print"],
+Cell[35695, 805, 622, 11, 31, "Print"],
+Cell[36320, 818, 628, 11, 31, "Print"],
+Cell[36951, 831, 632, 11, 31, "Print"],
+Cell[37586, 844, 642, 11, 31, "Print"],
+Cell[38231, 857, 621, 12, 31, "Print"],
+Cell[38855, 871, 625, 12, 31, "Print"],
+Cell[39483, 885, 627, 12, 31, "Print"],
+Cell[40113, 899, 637, 13, 31, "Print"],
+Cell[40753, 914, 622, 11, 31, "Print"],
+Cell[41378, 927, 628, 11, 31, "Print"],
+Cell[42009, 940, 634, 11, 31, "Print"],
+Cell[42646, 953, 641, 11, 31, "Print"],
+Cell[43290, 966, 614, 11, 31, "Print"],
+Cell[43907, 979, 616, 11, 31, "Print"],
+Cell[44526, 992, 616, 11, 31, "Print"],
+Cell[45145, 1005, 622, 11, 31, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45816, 1022, 214, 6, 65, "Input"],
+Cell[46033, 1030, 149, 3, 73, "Output"]
+}, Open  ]]
+}
+]
+*)
+

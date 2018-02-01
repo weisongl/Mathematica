@@ -1,0 +1,123 @@
+%\documentclass[journal=jceaax,manuscript=article]{achemso}
+\documentclass[11pt,reqno]{amsart}
+\pagestyle{plain}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{dcolumn}
+\usepackage{multirow}
+
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
+\usepackage{epstopdf}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb}
+
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Electric-field mapped averaging for non-interacting and interacting dipoles}
+\author{Weisong Lin}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+This time we consider a system of rigid 2D Heisenberg dipoles
+interacting with an external field $\bf{E}$. Let $\theta$ be the angle that $\boldsymbol \mu$ makes with {\bf E}, and we use $\theta$ as the coordinate describing the orientation, $0 \le \theta \le 2\pi$. such that such that the total energy of a configuration is given by
+\begin{equation}
+u = -E\mu\sum_i^N \cos\theta_i.
+\end{equation}
+We note that $\theta = 0/2\pi$ is the preferred (low-energy) orientation. And the corresponding Boltzmann factor and partition function would be
+\begin{align}
+p&=\exp[\beta  E \mu  \cos\theta_i] \nonumber \\  
+q&=\int_0^{2 \pi } p \, d\theta_i = 2 \pi  I_0(\beta  E \mu )
+\end{align} 
+Now we can try to solve eq(12) in our JCTC paper:
+\begin{equation}
+\frac{\partial }{\partial E}\left(\frac{p}{q}\right)+\nabla\cdot\left(\frac{p}{q}{\bf v}^{E}\right)=0;
+\end{equation}
+\begin{equation}
+\label{eq_pq}
+\frac{\beta  \mu  e^{\beta  E \mu  \cos \theta _i} \left(\cos \theta _i I_0(\beta  E \mu )-I_1(\beta  E \mu )\right)}{2 \pi  I_0(\beta  E \mu )^2}+\frac{e^{\beta  E \mu  \cos \theta _i} \left(\left(v^E\right)'-\beta  E \mu   \sin \theta _i v^E\right)}{2 \pi  I_0(\beta  E \mu )}=0
+\end{equation}
+$I_0$ and $I_1$ are Bessel Functions. Note we could divide both side on eq:(\ref{eq_pq}) by  $e^{\beta  E \mu  \cos \theta _i}/ 2 \pi  I_0(\beta  E \mu )$  we would have:
+\begin{equation}
+\label{eq_vEDefferential}
+\left(v^E\right)' -\beta  E \mu   \sin \theta _i v^E=\frac{\beta  \mu  \left(\cos \theta _i I_0(\beta  E \mu )-I_1(\beta  E \mu )\right)}{  I_0(\beta  E \mu )}
+\end{equation}
+the general function for eq(\ref{eq_vEDefferential}) would be
+\begin{equation}
+v^E=e^{-\beta  E \mu  \cos\theta_i} \int \frac{\beta  \mu  \left(\cos \theta _i I_0(\beta  E \mu )-I_1(\beta  E \mu )\right)}{  I_0(\beta  E \mu )} \exp (\beta  E \mu  \cos\theta_i) \, d\theta_i;
+\end{equation}
+We are interested $v^E$ and $v^{EE}=\partial v^E/\partial E$ in the case when electric field ${\bf E}\to 0$
+\begin{align}
+v^E&=-\beta  \mu  \sin \theta _i \nonumber \\
+v^{EE}&=\frac{1}{2} \beta ^2 \mu ^2 \cos\theta _i \sin\theta _i 
+\end{align}
+Then necessary Jacobian derivatives would be
+\begin{align}
+\label{eq_J}
+J_E&=\frac{\partial v^E}{\partial\theta_i} =-\beta  \mu \sum_i^N{\cos\theta _i}  \nonumber \\
+J_{EE}-J_E J_E &=\frac{\partial v^{EE}}{\partial\theta_i} + v^E\frac{\partial^2 v^E}{\partial \theta_i^2}\nonumber \\
+&= \frac{1}{2} \beta ^2 \mu ^2 \sum_i^N{\left(-1 + 2 \cos2\theta_i\right)}
+\end{align}
+The necessary energy derivatives would be
+\begin{align}
+\label{eq_u}
+\mathcal{U}_E&= \mathit{u}_E-v^E\beta F = -\beta  \mu  \sum_i^N\cos\theta_i + \beta ^2  \mu\sum_i^N F_i  \sin\theta_i \nonumber \\
+\mathcal{U}_{EE}&=\mathit{u}_{EE}-\beta  F \left(v_{EE}+v_E \frac{\partial v_E}{\partial \theta _i}\right)+v_E \phi v_E-2V_E F_E  \nonumber \\
+&=\frac{-3}{2} \sum_i^N  F_i \beta ^3  \mu ^2 \sin\theta_i \cos\theta_i-2 \sum_i^N \beta ^2 \mu ^2 \sin ^2\theta_i \nonumber \\
+&+\sum_i^N \sum_i^N \beta  ^3 \mu ^2  \sin\theta_i \phi_{ij} \sin\theta_i
+\end{align}
+where $Fi=-\partial u/\partial \theta_i$ and $\phi_{ij} = \partial^2 u/\partial\theta_i\partial\theta_j$. Note that torque on atom i is also $\tau_i=-\partial u/\partial \theta_i$ so $F_i= \tau_i$. If combine eq({\ref{eq_J}) and eq(\ref{eq_u}), we can get $\mathcal{A}_E$ and $\mathcal{A}_{EE}$ for X or Y direction. 
+\begin{align}
+\mathcal{A}_{E}&=  -\left< J_E \right> + \left< U_E \right> 
+=  \beta ^2 \mu \sum_i^N  F_i   \sin\theta_i \nonumber \\
+\mathcal{A}_{EE} &= -\left<J_{EE}-J_E J_E\right> + \left<\mathcal{U}_E\right> - Var[J_E - \mathcal{U}_E] \nonumber \\
+&=-\frac{N\beta ^2 \mu ^2}{2}-\frac{3}{2}  \beta ^3\mu ^2 \sum_i^N F_i \sin\theta_i \cos\theta_i\nonumber \\
+&+\beta ^3 \mu ^2 \sum_i^N \phi_{ij}  \sin\theta_i \sin\theta_i - Var\left[ \beta ^2 \mu \sum_i^N F_i   \sin\theta_i\right]
+\end{align}
+Now, we sum over X and y direction for these terms: $-\frac{N\beta ^2 \mu ^2}{2}$,$-\frac{3}{2}  \beta ^3\mu ^2 \sum_i^N F_i \sin\theta_i \cos\theta_i$,\\$\beta ^3 \mu ^2 \sum_i^N \phi_{ij}  \sin\theta_i \sin\theta_i$ and $Var\left[- \beta ^2 \mu \sum_i^N F_i   \sin\theta_i\right]$.
+\begin{equation}
+\label{eq:constant}
+\sum_{x,y}\left<-\sum_i^N\frac{\beta ^2 \mu ^2}{2}\right>= -N\beta ^2 \mu ^2
+\end{equation}
+\begin{align}
+\label{eq:Fexey}
+\sum_{x,y}\left<\frac{3}{2}  \beta ^3\mu ^2 \sum_i^N F_i \sin\theta_i \cos\theta_i\right> &= \left<\frac{3}{2} \beta ^3\mu ^2 \sum_i^N \tau_i\sin\theta_i\cos\theta_i\right> \nonumber \\
+&= \begin{array}{cc}
+ \{ & 
+\begin{array}{cc}
+ \left<\frac{3}{2} \beta ^3\mu ^2 \sum_i^N \tau_i\sin{2\theta_i}\right>  \\
+ \left< 3 \beta ^3\mu ^2 \sum_i^N \tau_i e_{xi e_{yi}\right>  \\
+\end{array}
+ \\
+\end{array}
+\end{align}
+\begin{align}
+\label{eq:phi}
+\sum_{x,y}\left<\beta ^3 \mu ^2\sum_i^N  \phi_{ij}\sin\theta_i\sin\theta_j\right>&=\left<\beta ^3 \mu ^2\sum_i^N \phi_{ij}(\sin\theta_i\sin\theta_j+\cos\theta_i\cos\theta_i)\right> \nonumber \\
+&=\left<\beta ^3 \mu ^2\sum_i^N \phi_{ij}\cos(\theta_i-\theta_j)\right>
+\end{align}
+For the $Var\left[ \beta ^2 \mu \sum_i^N F_i   \sin\theta_i\right]$ has two parts: $\beta^4\mu^2\left<(\sum_i^N F_i \sin\theta_i)^2\right>$ and $\beta^4\mu^2\left<(\sum_i^N F_i \sin\theta_i)\right>^2$.
+\begin{align}
+\label{eq:var1}
+\sum_{x,y} \left<\left(\sum_i^N F_i \sin\theta_i\right)^2\right> &= \sum_{x,y}\left<\left(\sum_i^N \tau_i  \overset{\to}{e_i} \cdot \overset{\to}{Y}\right)^2\right>= \sum_{x,y}\left<\left(\overset{\to}{Y} \cdot\left(\sum_i^N \tau_i  \overset{\to}{e_i} \right) \right)^2\right> \nonumber \\
+&=\left<\left(\sum_i^N\tau_i  \overset{\to}{e_i}) \right)^2\right> = \left<\overset{\to}{A}^2\right> 
+\end{align}
+ where vector $\overset{\to}{A}=\left(\sum_i^N\tau_i  \overset{\to}{e_i}) \right) $
+\begin{align}
+\label{eq:Var2}
+\sum_{x,y}\left<\sum_i^N F_i \sin\theta_i\right>^2 &= \sum_{x,y}\left<\left(\sum_i^N \tau_i  \overset{\to}{e_i} \cdot \overset{\to}{Y}\right)\right>^2 =\left<A_x\right>^2 + \left<A_y\right>^2
+\end{align}
+Where $A_x$ and $A_y$ are x and y component of $\overset{\to}{A}$.
+In Sum, if we combine eq(\ref{eq:constant}),(\ref{eq:Fexey}),(\ref{eq:phi}),(\ref{eq:var1})and (\ref{eq:Var2})
+\begin{align}
+\mathcal{A}_{EE} &=-N\beta ^2 \mu ^2 + \left<\frac{3}{2} \beta ^3\mu ^2 \sum_i^N \tau_i\sin{2\theta_i}\right> + \left<\beta ^3 \mu ^2\sum_i^N \phi_{ij}\cos(\theta_i-\theta_j)\right> \nonumber \\
+&-var\left[ \sum_i^N \tau_i \overset{\to}{e_i}\right]
+\end{align}
+\end{document}  

@@ -1,0 +1,408 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13035,        400]
+NotebookOptionsPosition[     11572,        347]
+NotebookOutlinePosition[     11936,        363]
+CellTagsIndexPosition[     11893,        360]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["get vEE from p11", "Subsection",
+ CellChangeTimes->{{3.709600880240028*^9, 3.7096008854380503`*^9}}],
+
+Cell["Note that P11 in Steven\[CloseCurlyQuote]s Sol is ", "Text",
+ CellChangeTimes->{{3.709599779919324*^9, 3.7095997905297937`*^9}, {
+  3.7096005913394814`*^9, 3.709600592065662*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], " ", 
+   SuperscriptBox["bmu", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Cos", "[", "theta1", "]"}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"Cos", "[", "theta2", "]"}]}]}], ")"}], " ", 
+   RowBox[{"Sin", "[", "theta1", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{3.70960054487569*^9}],
+
+Cell["\<\
+and we think it\[CloseCurlyQuote]s expression for vEE if we times p, However, \
+it\[CloseCurlyQuote]s not!
+P11 is actually A1 in the function below\
+\>", "Text",
+ CellChangeTimes->{{3.7095998012089787`*^9, 3.7095999692508793`*^9}, {
+  3.709600000906062*^9, 3.709600020702736*^9}, {3.709600606193666*^9, 
+  3.709600606319063*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"A", "+", 
+    RowBox[{"A1", "*", "Ex"}], "+", 
+    RowBox[{"o", 
+     RowBox[{"(", 
+      SuperscriptBox["Ex", "2"], ")"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.709599973042171*^9, 3.709599996438807*^9}, {
+   3.709600277845182*^9, 3.709600279219008*^9}, 3.70960054760464*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "$RecursionLimit","reclim2",
+   "\"Recursion depth of \\!\\(\\*RowBox[{\\\"1024\\\"}]\\) exceeded during \
+evaluation of \\!\\(\\*RowBox[{\\\"A\\\", \\\"+\\\", RowBox[{\\\"A1\\\", \\\" \
+\\\", \\\"Ex\\\"}], \\\"+\\\", RowBox[{SuperscriptBox[\\\"Ex\\\", \\\"2\\\"], \
+\\\" \\\", \\\"o\\\"}]}]\\).\"",2,14,9,32434297816915369027,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.709600424968869*^9, 3.709600444682253*^9}, {
+   3.7096004757773*^9, 3.7096005020439253`*^9}, 3.709600550307864*^9}]
+}, Closed]],
+
+Cell[TextData[{
+ "where A = p ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["v", "E"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  and do expansion for p and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["v", "E"], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.7096000231521797`*^9, 3.709600041199147*^9}, {
+  3.709600643677292*^9, 3.7096006535942717`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"p0", "+", 
+    RowBox[{"p1", " ", "Ex"}], "+", " ", 
+    RowBox[{"o", 
+     RowBox[{"(", 
+      SuperscriptBox["Ex", "2"], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["v", "E"], "=", 
+   RowBox[{"vE", "+", 
+    RowBox[{"vEE", "*", "Ex"}], "+", 
+    RowBox[{"o", 
+     RowBox[{"(", 
+      SuperscriptBox["Ex", "2"], ")"}]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7096000429113007`*^9, 3.7096000888701982`*^9}, {
+  3.7096002815564337`*^9, 3.709600285636427*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"Power\\\"}]\\) in \
+\\!\\(\\*SuperscriptBox[\\\"v\\\", \\\"\[ExponentialE]\\\"]\\) is \
+Protected.\"",2,16,10,32434297816915369027,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.709600425086898*^9, 3.709600444703493*^9}, {
+   3.709600475801631*^9, 3.709600502083302*^9}, 3.7096005503444633`*^9}]
+}, Closed]],
+
+Cell["so", "Text",
+ CellChangeTimes->{{3.7096000942118883`*^9, 3.709600105917798*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"p", " ", 
+     FormBox[
+      SuperscriptBox["v", "E"],
+      TraditionalForm]}], "  ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"p0", "+", 
+        RowBox[{"p1", " ", "Ex"}], "+", " ", 
+        RowBox[{"o", 
+         RowBox[{"(", 
+          SuperscriptBox["Ex", "2"], ")"}]}]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"vE", "+", 
+        RowBox[{"vEE", "*", "Ex"}], "+", 
+        RowBox[{"o", 
+         RowBox[{"(", 
+          SuperscriptBox["Ex", "2"], ")"}]}]}], ")"}]}], "=", 
+     RowBox[{
+      RowBox[{"p0", " ", "vE"}], " ", "+", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"p0", " ", "vEE"}], "+", 
+         RowBox[{"p1", " ", "vE"}]}], ")"}], "Ex"}], " ", "+", " ", 
+      RowBox[{"o", 
+       RowBox[{"(", 
+        SuperscriptBox["Ex", "2"], ")"}]}]}]}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.7096001080677767`*^9, 3.7096001622316*^9}, {
+   3.709600287062215*^9, 3.709600296438696*^9}, 3.709600539579607*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"Times\\\"}]\\) in \
+\\!\\(\\*RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"+\\\", \
+RowBox[{SuperscriptBox[\\\"Ex\\\", \\\"2\\\"], \\\" \\\", \\\"o\\\"}], \
+\\\"+\\\", RowBox[{\\\"Ex\\\", \\\" \\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\
+\\\"bmu\\\", \\\" \\\", RowBox[{\\\"Cos\\\", \\\"[\\\", \\\"theta1\\\", \\\"]\
+\\\"}]}], \\\"+\\\", RowBox[{\\\"bmu\\\", \\\" \\\", RowBox[{\\\"Cos\\\", \
+\\\"[\\\", \\\"theta2\\\", \\\"]\\\"}]}]}], \\\")\\\"}]}]}], \\\")\\\"}], \
+\\\" \\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{SuperscriptBox[\\\"Ex\\\", \
+\\\"2\\\"], \\\" \\\", \\\"o\\\"}], \\\"+\\\", RowBox[{\\\"Ex\\\", \\\" \\\", \
+\\\"vEE\\\"}], \\\"-\\\", RowBox[{\\\"bmu\\\", \\\" \\\", \
+RowBox[{\\\"Sin\\\", \\\"[\\\", \\\"theta1\\\", \\\"]\\\"}]}]}], \
+\\\")\\\"}]}]\\) is Protected.\"",2,17,11,32434297816915369027,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.70960042510286*^9, 3.7096004447300663`*^9}, {
+   3.7096004758351517`*^9, 3.7096005021052217`*^9}, 3.709600550362105*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"Times\\\"}]\\) in \
+\\!\\(\\*RowBox[{SuperscriptBox[\\\"v\\\", \\\"\[ExponentialE]\\\"], \\\" \
+\\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"+\\\", \
+RowBox[{SuperscriptBox[\\\"Ex\\\", \\\"2\\\"], \\\" \\\", \\\"o\\\"}], \
+\\\"+\\\", RowBox[{\\\"Ex\\\", \\\" \\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\
+\\\"bmu\\\", \\\" \\\", RowBox[{\\\"Cos\\\", \\\"[\\\", \\\"theta1\\\", \\\"]\
+\\\"}]}], \\\"+\\\", RowBox[{\\\"bmu\\\", \\\" \\\", RowBox[{\\\"Cos\\\", \
+\\\"[\\\", \\\"theta2\\\", \\\"]\\\"}]}]}], \\\")\\\"}]}]}], \\\")\\\"}]}]\\) \
+is Protected.\"",2,17,12,32434297816915369027,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.70960042510286*^9, 3.7096004447300663`*^9}, {
+   3.7096004758351517`*^9, 3.7096005021052217`*^9}, 3.709600550372118*^9}]
+}, Closed]],
+
+Cell["we know that ", "Text",
+ CellChangeTimes->{{3.709600171638048*^9, 3.709600173423203*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vE", "=", 
+   RowBox[{
+    RowBox[{"-", "bmu"}], " ", 
+    RowBox[{"Sin", "[", "theta1", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.709600174558179*^9, 3.709600209863904*^9}}],
+
+Cell["and p0 and p1 would be:", "Text",
+ CellChangeTimes->{{3.709600253336379*^9, 3.7096002596664143`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"bJ", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"theta1", "-", "theta2"}], "]"}]}], "+", 
+       RowBox[{"bmu", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", "theta1", "]"}], "+", 
+          RowBox[{"Cos", "[", "theta2", "]"}]}], ")"}], " ", "Ex"}]}], ")"}]],
+     "/.", 
+    RowBox[{"bJ", "\[Rule]", "0"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"p0", "=", 
+  RowBox[{"Normal", "[", 
+   RowBox[{"Series", "[", 
+    RowBox[{"p", ",", 
+     RowBox[{"{", 
+      RowBox[{"Ex", ",", "0", ",", "0"}], "}"}]}], "]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"p1", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Normal", "[", 
+      RowBox[{"Series", "[", 
+       RowBox[{"p", ",", 
+        RowBox[{"{", 
+         RowBox[{"Ex", ",", "0", ",", "1"}], "}"}]}], "]"}], "]"}], "-", 
+     "p0"}], ")"}], "/", "Ex"}]}]}], "Input",
+ CellChangeTimes->{{3.709600242715868*^9, 3.709600268925445*^9}, {
+  3.709600301715197*^9, 3.7096003061221724`*^9}, {3.709600437526561*^9, 
+  3.7096004992060757`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.7096002632374573`*^9, 3.709600307645701*^9, {3.709600425140052*^9, 
+   3.709600444769897*^9}, {3.7096004758778353`*^9, 3.709600502156373*^9}, 
+   3.709600550398202*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bmu", " ", 
+   RowBox[{"Cos", "[", "theta1", "]"}]}], "+", 
+  RowBox[{"bmu", " ", 
+   RowBox[{"Cos", "[", "theta2", "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.7096002632374573`*^9, 3.709600307645701*^9, {3.709600425140052*^9, 
+   3.709600444769897*^9}, {3.7096004758778353`*^9, 3.709600502156373*^9}, 
+   3.709600550399638*^9}]
+}, Open  ]],
+
+Cell["and again ", "Text",
+ CellChangeTimes->{{3.709600346238243*^9, 3.709600357700755*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"p11", "=", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "2"]}], " ", 
+    SuperscriptBox["bmu", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Cos", "[", "theta1", "]"}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"Cos", "[", "theta2", "]"}]}]}], ")"}], " ", 
+    RowBox[{"Sin", "[", "theta1", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.709600360551381*^9, 3.7096003611033897`*^9}, 
+   3.7096005662803698`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox["1", "2"]}], " ", 
+  SuperscriptBox["bmu", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Cos", "[", "theta1", "]"}], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"Cos", "[", "theta2", "]"}]}]}], ")"}], " ", 
+  RowBox[{"Sin", "[", "theta1", "]"}]}]], "Output",
+ CellChangeTimes->{{3.709600425153925*^9, 3.709600444786105*^9}, {
+   3.709600475883719*^9, 3.709600502172896*^9}, 3.709600550413192*^9}]
+}, Closed]],
+
+Cell["then we just need to solve for vEE", "Text",
+ CellChangeTimes->{{3.709600320470311*^9, 3.709600336943769*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vE", "=", 
+   RowBox[{
+    RowBox[{"-", "bmu"}], " ", 
+    RowBox[{"Sin", "[", "theta1", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"p0", " ", "vEE"}], "+", 
+      RowBox[{"p1", " ", "vE"}]}], "\[Equal]", "p11"}], ",", "vEE"}], "]"}], "//",
+   "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.7096003640053*^9, 3.709600411642446*^9}, {
+  3.709600452612002*^9, 3.709600455397381*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"vEE", "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "2"], " ", 
+     SuperscriptBox["bmu", "2"], " ", 
+     RowBox[{"Cos", "[", "theta1", "]"}], " ", 
+     RowBox[{"Sin", "[", "theta1", "]"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.709600425171636*^9, 3.709600502193584*^9}, 
+   3.709600550426997*^9}]
+}, Open  ]],
+
+Cell["Horray same with Our analytical result.", "Text",
+ CellChangeTimes->{{3.7096005108448067`*^9, 3.709600528477085*^9}}]
+}, Open  ]]
+},
+WindowSize->{1680, 951},
+WindowMargins->{{-1, Automatic}, {Automatic, -1}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 106, 1, 91, "Subsection"],
+Cell[689, 25, 185, 2, 64, "Text"],
+Cell[877, 29, 385, 12, 104, "Input"],
+Cell[1265, 43, 339, 7, 106, "Text"],
+Cell[CellGroupData[{
+Cell[1629, 54, 340, 9, 67, "Input"],
+Cell[1972, 65, 546, 9, 98, "Message"]
+}, Closed]],
+Cell[2533, 77, 412, 13, 56, "Text"],
+Cell[CellGroupData[{
+Cell[2970, 94, 563, 17, 112, "Input"],
+Cell[3536, 113, 398, 8, 92, "Message"]
+}, Closed]],
+Cell[3949, 124, 86, 1, 54, "Text"],
+Cell[CellGroupData[{
+Cell[4060, 129, 1057, 33, 67, "Input"],
+Cell[5120, 164, 1086, 17, 238, "Message"],
+Cell[6209, 183, 856, 14, 106, "Message"]
+}, Closed]],
+Cell[7080, 200, 95, 1, 54, "Text"],
+Cell[7178, 203, 217, 6, 61, "Input"],
+Cell[7398, 211, 107, 1, 64, "Text"],
+Cell[CellGroupData[{
+Cell[7530, 216, 1196, 36, 142, "Input"],
+Cell[8729, 254, 221, 4, 60, "Output"],
+Cell[8953, 260, 365, 9, 60, "Output"]
+}, Open  ]],
+Cell[9333, 272, 92, 1, 64, "Text"],
+Cell[CellGroupData[{
+Cell[9450, 277, 475, 14, 104, "Input"],
+Cell[9928, 293, 456, 12, 234, "Output"]
+}, Closed]],
+Cell[10399, 308, 116, 1, 54, "Text"],
+Cell[CellGroupData[{
+Cell[10540, 313, 504, 15, 101, "Input"],
+Cell[11047, 330, 371, 10, 83, "Output"]
+}, Open  ]],
+Cell[11433, 343, 123, 1, 64, "Text"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,159 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4418,        150]
+NotebookOptionsPosition[      4112,        135]
+NotebookOutlinePosition[      4484,        151]
+CellTagsIndexPosition[      4441,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["AEE=-JEE+JEJE+UEE-VAR(JE-UE)", "Text",
+ CellChangeTimes->{3.698751469251503*^9},
+ FontColor->GrayLevel[0]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"JE", "=", 
+   RowBox[{
+    RowBox[{"\[Beta]", " ", "\[Micro]"}], " ", "<", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"], 
+     SubscriptBox["x", "i"]}], ">"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"JEE", "=", 
+   RowBox[{"<", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "N"], 
+      RowBox[{
+       FractionBox["2", "3"], " ", 
+       SuperscriptBox["\[Beta]", "2"], " ", 
+       SuperscriptBox["\[Micro]", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         RowBox[{"3", " ", 
+          SubsuperscriptBox["x", "i", "2"]}]}], ")"}]}]}], "+", 
+     RowBox[{
+      SuperscriptBox["\[Beta]", "2"], " ", 
+      SuperscriptBox["\[Micro]", "2"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "N"], 
+       RowBox[{
+        SubscriptBox["x", "i"], 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"j", "\[NotEqual]", "i"}], "N"], 
+         SubscriptBox["x", "j"]}]}]}]}]}], ">"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"UE", "=", 
+   RowBox[{"<", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "\[Beta]"}], " ", "\[Micro]", " ", 
+        SubscriptBox["x", "i"]}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox["\[Beta]", "2"], " ", "\[Micro]", " ", 
+        SubscriptBox["F", "i"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          SubsuperscriptBox["x", "i", "2"]}], ")"}]}]}], ")"}]}], ">"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"UEE", "=", " ", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     SuperscriptBox["\[Beta]", "3"], " ", 
+     SuperscriptBox["\[Micro]", "2"]}], " ", "<", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"k", "=", "1"}], "N"], " ", 
+      RowBox[{
+       SubscriptBox["\[Phi]", "ik"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SubsuperscriptBox["x", "i", "2"]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "1"}], "+", 
+         SubsuperscriptBox["x", "k", "2"]}], ")"}]}]}]}], ">", 
+    RowBox[{
+     RowBox[{"+", " ", 
+      SuperscriptBox["\[Beta]", "2"]}], " ", 
+     SuperscriptBox["\[Micro]", "2"]}], "<", "  ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       SubsuperscriptBox["x", "i", "2"]}], ")"}]}], ">", 
+    RowBox[{
+     RowBox[{"-", " ", 
+      FractionBox["2", "3"]}], " ", 
+     SuperscriptBox["\[Beta]", "3"], " ", 
+     SuperscriptBox["\[Micro]", "2"]}], "<", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "N"], " ", 
+     RowBox[{
+      SubscriptBox["F", "i"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SubscriptBox["x", "i"]}], "+", 
+        SubsuperscriptBox["x", "i", "3"]}], ")"}]}]}], ">"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.698751411989914*^9, 3.6987516144184065`*^9}},
+ FontColor->GrayLevel[0]]
+},
+WindowSize->{681, 676},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 112, 2, 45, "Text"],
+Cell[673, 24, 3435, 109, 573, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

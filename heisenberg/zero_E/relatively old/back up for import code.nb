@@ -1,0 +1,3584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    116239,       3575]
+NotebookOptionsPosition[    110005,       3393]
+NotebookOutlinePosition[    110337,       3408]
+CellTagsIndexPosition[    110294,       3405]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Import zero order",
+ FontSize->18]], "Subsection",
+ CellChangeTimes->{{3.71196716956642*^9, 3.711967170352154*^9}, {
+  3.711969012326323*^9, 3.71196901435152*^9}, {3.712023143453249*^9, 
+  3.712023146565065*^9}, {3.7124038290871143`*^9, 3.712403830889721*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["H0ns", "Subsubsection",
+ CellChangeTimes->{{3.7117987576026363`*^9, 3.711798759194376*^9}, {
+   3.712183244590639*^9, 3.7121832453242493`*^9}, 3.71218335364771*^9}],
+
+Cell["Fully Check for H0", "Text",
+ CellChangeTimes->{{3.711797904455206*^9, 3.711797912124702*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"H0x", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H0x.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"H0", "[", 
+        RowBox[{"0", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"H0x", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.711901588222185*^9, {3.7119671842675743`*^9, 3.711967185566413*^9}, {
+   3.71231789226087*^9, 3.7123179081882133`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"H0cx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H0cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"H0c", "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"H0cx", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712317914700629*^9, 3.712317918761207*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"H0sx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H0sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"H0s", "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"H0sx", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7123179291217813`*^9, 3.712317929319914*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["I0cch", "Subsubsection",
+ CellChangeTimes->{{3.71179880608223*^9, 3.711798812838423*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["I0cch",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I0cchx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["I0cch",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{
+          StyleBox["I0cchx",
+           FontColor->RGBColor[1, 0, 0]], "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712317945390335*^9, 3.712317945607958*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox["I0schx",
+      FontColor->RGBColor[1, 0, 0]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I0schx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["I0sch",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{
+          StyleBox["I0schx",
+           FontColor->RGBColor[1, 0, 0]], "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7119292398185043`*^9, 3.7119292562120323`*^9}, {
+  3.712317960188387*^9, 3.7123179604105387`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox["I0cshx",
+      FontColor->RGBColor[1, 0, 0]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I0cshx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["I0csh",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{
+          StyleBox["I0cshx",
+           FontColor->RGBColor[1, 0, 0]], "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7123179730190363`*^9, 3.712317973225768*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["I0ssh",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I0sshx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["I0ssh",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{"ToExpression", "[", 
+         RowBox[{
+          StyleBox[
+           RowBox[{
+            StyleBox["I0ssh",
+             FontColor->RGBColor[1, 0, 0]], "x"}]], "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"11", "*", 
+              RowBox[{"(", 
+               RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+            "3"}], "]"}], "]"}], "]"}], "/.", 
+        RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.7119298483511877`*^9, {3.712317983852618*^9, 3.712317984079646*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["F0ns", "Subsubsection",
+ CellChangeTimes->{{3.71193001595223*^9, 3.7119300302525797`*^9}, 
+   3.711930968566983*^9, 3.711965956224492*^9, 3.7121834314182987`*^9, {
+   3.7122497009190617`*^9, 3.71224971569695*^9}, {3.7123176360180893`*^9, 
+   3.712317636159196*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["F0s",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/F0sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["F0s",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"F0sx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711965958926589*^9, 
+   3.711965959886602*^9}, {3.712317993541934*^9, 3.712317993763418*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["F0c",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/F0cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["F0c",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"F0cx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.7123180063449383`*^9, 
+   3.7123180065804453`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["E0ns", "Subsubsection",
+ CellChangeTimes->{{3.711931044846529*^9, 3.711931046748021*^9}, 
+   3.7121834463805428`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["E0s",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/E0sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["E0s",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox[
+          RowBox[{
+           StyleBox["E0s",
+            FontColor->RGBColor[1, 0, 0]], "x"}]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711931087843315*^9, 
+   3.7119310896510773`*^9}, {3.712318015906294*^9, 3.712318016134717*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["E0c",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/E0cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["E0c",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"E0cx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["A0n and dA0n",
+ FontSize->18]], "Subsubsection",
+ CellChangeTimes->{{3.7118833913881617`*^9, 3.711883392246522*^9}, {
+  3.712183466932745*^9, 3.7121834954796247`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"A0cx0", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/A0cx0.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"A0cx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/A0cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"A0c", "[", 
+        RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["A0cx0",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{"j", "+", "1"}], ",", "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"A0c", "[", 
+        RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["A0cx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.711896289468214*^9, 3.711931899814022*^9, 3.7119322392513723`*^9, {
+   3.712186515463974*^9, 3.7121865323685427`*^9}, {3.712318046645115*^9, 
+   3.712318046832699*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"A0sx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\</home/weisongl/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/A0sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A0s", "[", 
+      RowBox[{"0", ",", "j", ",", "theta1"}], "]"}], ":=", "0"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["A0s",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["A0sx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.711896462577117*^9, 3.711896470290187*^9}, 
+   3.7119318399649057`*^9, 3.711932260948926*^9, {3.712318056362398*^9, 
+   3.712318056576805*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"dA0cx0", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/dA0cx0.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dA0cx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/dA0cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"dA0c", "[", 
+        RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"dA0cx0", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{"j", "+", "1"}], ",", "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"dA0c", "[", 
+        RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"dA0cx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712186867433703*^9, 3.712186874272447*^9}, {
+  3.7123180694172153`*^9, 3.712318069602819*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"dA0sx", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/dA0sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA0s", "[", 
+      RowBox[{"0", ",", "j", ",", "theta1"}], "]"}], ":=", "0"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"dA0s", "[", 
+        RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"dA0sx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.711897833190621*^9, 3.711897868580965*^9, {3.712318079435321*^9, 
+   3.712318079846013*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Import first order",
+ FontSize->18]], "Subsection",
+ CellChangeTimes->{{3.709338159052631*^9, 3.709338160321439*^9}, {
+  3.7120140662524548`*^9, 3.712014073831851*^9}, {3.712404123194356*^9, 
+  3.71240412497033*^9}},
+ ExpressionUUID -> "c7908131-e7f4-4cc0-8ec1-03e721e7210e"],
+
+Cell[CellGroupData[{
+
+Cell["H1ns", "Subsubsection",
+ CellChangeTimes->{{3.712014103748879*^9, 3.712014105338934*^9}, {
+   3.712014217897254*^9, 3.71201422027413*^9}, {3.7120142800017242`*^9, 
+   3.712014306017795*^9}, 3.7120147921939793`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox[
+     RowBox[{
+      StyleBox["H1",
+       FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H1x.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.70377208256732*^9, 3.7037720969979267`*^9}, {
+   3.703774546699085*^9, 3.703774551030653*^9}, 3.7037844637750177`*^9, {
+   3.7037845086188383`*^9, 3.703784519897764*^9}, 3.703784626226843*^9, {
+   3.7082536674496*^9, 3.7082536691535196`*^9}, 3.708267690982376*^9, {
+   3.711756381334168*^9, 3.711756395376485*^9}, {3.711756467286512*^9, 
+   3.711756472737513*^9}, {3.711757933465859*^9, 3.711757946531314*^9}, 
+   3.711758552448298*^9, 3.711758775330525*^9, 3.711758993847789*^9, 
+   3.711759398793408*^9, 3.712014154797965*^9, {3.7120143102699413`*^9, 
+   3.712014311236678*^9}, {3.712014422300338*^9, 3.7120144227061663`*^9}, 
+   3.712014453340539*^9, {3.712404295714479*^9, 3.712404296170649*^9}},
+ $CellContext`ExpressionUUID -> "72100a27-9f00-4356-93a9-cf4891788746"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"5", ",", "10"}], "}"}], "]"}]}], ";", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox["H1",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"0", ",", "c2", ",", "theta1"}], "]"}], "-", 
+    RowBox[{"ToExpression", "[", 
+     RowBox[{
+      StyleBox[
+       RowBox[{
+        StyleBox["H1",
+         FontColor->RGBColor[1, 0, 0]], "x"}]], "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"c2", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}]}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.712014487487*^9, 3.712014536175067*^9}, 
+   3.712017074491065*^9, {3.712017409046341*^9, 3.712017412355991*^9}, 
+   3.7120174906777573`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["H1",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"0", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox[
+          RowBox[{
+           StyleBox["H1",
+            FontColor->RGBColor[1, 0, 0]], "x"}]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7120152948037977`*^9, 3.7120153088638353`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["H1cx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H1cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712014165361498*^9, 3.712014189044338*^9}, {
+   3.712014314275076*^9, 3.7120143151400013`*^9}, {3.712014426854595*^9, 
+   3.712014427128954*^9}, 3.712015236719001*^9, {3.7124043046099777`*^9, 
+   3.712404305105682*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";", 
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "10"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["H1c",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["H1cx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.7120145620301323`*^9, 3.7120145713227262`*^9}, {
+  3.712014602781967*^9, 3.712014618528113*^9}, {3.712017076960292*^9, 
+  3.712017086645486*^9}, {3.7120173922697487`*^9, 3.7120174035356913`*^9}, {
+  3.712017484946718*^9, 3.712017492834922*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["H1c",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["H1cx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7120145951126738`*^9, 3.7120145975961847`*^9}, {
+  3.71201531733589*^9, 3.712015319873971*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["H1sx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/H1sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712014178298251*^9, 3.712014190463812*^9}, {
+   3.712014320215824*^9, 3.71201432079142*^9}, {3.7120144316850986`*^9, 
+   3.7120144319439573`*^9}, 3.712017010274057*^9, 3.712017304185441*^9, 
+   3.7120173731713953`*^9, {3.7124043109379387`*^9, 3.712404312313757*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";", 
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "10"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["H1s",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], ";"}], "//", 
+  "Simplify"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["H1s",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["H1sx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.711757498886941*^9, 3.711757522232748*^9}, {
+   3.711758573739802*^9, 3.711758573876336*^9}, 3.711759657747921*^9, {
+   3.7117600209783573`*^9, 3.7117600382256193`*^9}, 3.711760198286378*^9, 
+   3.7117959612237453`*^9, 3.712014350064867*^9, {3.712014649347046*^9, 
+   3.712014698388268*^9}, {3.71201721797304*^9, 3.712017237405465*^9}, {
+   3.712017421498522*^9, 3.7120174254171743`*^9}, 3.712017501143618*^9, 
+   3.712404321096784*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["H1s",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["H1sx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7120153248691273`*^9, 3.712015331829966*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["I1ns", "Subsubsection",
+ CellChangeTimes->{{3.712014250232387*^9, 3.712014253678554*^9}, {
+  3.712014783967025*^9, 3.712014788201075*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["I1cchx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I1cchx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"c1", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "5"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"c2", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "10"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["I1cch",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["I1cchx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.711757595559197*^9, 3.711757608940761*^9}, {
+   3.711760398186248*^9, 3.71176040754801*^9}, {3.711795602562846*^9, 
+   3.711795620483597*^9}, {3.7117958214975023`*^9, 3.711795828539372*^9}, 
+   3.711795962787055*^9, {3.712014816619157*^9, 3.712014889181592*^9}, 
+   3.712014971154468*^9, {3.7120175527756147`*^9, 3.712017556820093*^9}, {
+   3.712019508148713*^9, 3.712019508797303*^9}, 3.712183588064712*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["I1cch",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["I1cchx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.71201533578237*^9, 3.7120153378026237`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["I1schx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\</home/weisongl/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I1sch.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712019436674287*^9, 3.7120194606907053`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"c1", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "5"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"c2", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "10"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   StyleBox["I1sch",
+    FontColor->RGBColor[1, 0, 0]], "[", 
+   RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+  RowBox[{"ToExpression", "[", 
+   RowBox[{
+    StyleBox["I1schx",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["11",
+         FontColor->RGBColor[1, 0, 0]], "*", 
+        RowBox[{"(", 
+         RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", "3"}],
+      "]"}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.711757641653302*^9, 3.7117576520791407`*^9}, {
+   3.711795544715495*^9, 3.7117955534439487`*^9}, 3.711795587330127*^9, 
+   3.711795965178707*^9, {3.712014912019456*^9, 3.7120149657986097`*^9}, {
+   3.712019510718794*^9, 3.712019511282125*^9}, 3.7121835936326103`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["I1sch",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["I1schx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.712014940999037*^9, 3.712014944536907*^9}, {
+  3.712015480217389*^9, 3.712015482018209*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["I1cshx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I1cshx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"c1", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "5"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"c2", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "10"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   StyleBox["I1csh",
+    FontColor->RGBColor[1, 0, 0]], "[", 
+   RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+  RowBox[{"ToExpression", "[", 
+   RowBox[{
+    StyleBox["I1cshx",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["11",
+         FontColor->RGBColor[1, 0, 0]], "*", 
+        RowBox[{"(", 
+         RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", "3"}],
+      "]"}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7117576731308317`*^9, 3.711757682048541*^9}, {
+   3.711795508621554*^9, 3.711795517943812*^9}, {3.71179576713774*^9, 
+   3.711795767323292*^9}, 3.71179596677195*^9, {3.712015037614153*^9, 
+   3.7120150731461487`*^9}, {3.71201951503124*^9, 3.712019521746963*^9}, 
+   3.712183599171123*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["I1csh",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["I1cshx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.712015487252873*^9, 3.712015489692617*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["I1sshx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/I1sshx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"c1", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "5"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"c2", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "10"}], "}"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["I1ssh",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["I1sshx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.7117577075754957`*^9, 3.71175771596135*^9}, {
+   3.7117954795496273`*^9, 3.711795494390093*^9}, 3.7117959679726963`*^9, {
+   3.712015110959301*^9, 3.71201515495047*^9}, {3.712019495732624*^9, 
+   3.712019525639929*^9}, 3.712183602780653*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["I1ssh",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox["I1sshx",
+          FontColor->RGBColor[1, 0, 0]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             StyleBox["11",
+              FontColor->RGBColor[1, 0, 0]], "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}], "/.", 
+       RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.712015131350194*^9, 3.712015134111443*^9}, {
+  3.7120155166987333`*^9, 3.7120155201561193`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["F1ns", "Subsubsection",
+ CellChangeTimes->{{3.71193001595223*^9, 3.7119300302525797`*^9}, 
+   3.711930968566983*^9, 3.711965956224492*^9, 3.7121834314182987`*^9, {
+   3.7122497009190617`*^9, 3.71224971569695*^9}, {3.7123176360180893`*^9, 
+   3.712317636159196*^9}, 3.712405080192402*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["F1s",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/F1sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["F1s",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"F1sx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711965958926589*^9, 
+   3.711965959886602*^9}, {3.712317993541934*^9, 3.712317993763418*^9}, {
+   3.712405093275272*^9, 3.712405095912457*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["F1c",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/F1cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["F1c",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"F1cx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.7123180063449383`*^9, 
+   3.7123180065804453`*^9}, {3.712405113378413*^9, 3.7124051184634037`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["E1ns", "Subsubsection",
+ CellChangeTimes->{{3.711931044846529*^9, 3.711931046748021*^9}, 
+   3.7121834463805428`*^9, 3.712405080984523*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["E1s",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/E1sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["E1s",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{
+         StyleBox[
+          RowBox[{
+           StyleBox["E1s",
+            FontColor->RGBColor[1, 0, 0]], "x"}]], "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711931087843315*^9, 
+   3.7119310896510773`*^9}, {3.712318015906294*^9, 3.712318016134717*^9}, {
+   3.712405129257921*^9, 3.7124051317671432`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["E1c",
+        FontColor->RGBColor[1, 0, 0]], "x"}]], "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/E1cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["E1c",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"E1cx", "[", 
+         RowBox[{"[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"11", "*", 
+             RowBox[{"(", 
+              RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+           "3"}], "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712405145343514*^9, 3.712405147902426*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ans", "Subsubsection",
+ CellChangeTimes->{{3.712015172389401*^9, 3.7120151729616957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["A1cx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/A1cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "10"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["A1c",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["A1cx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.711757745381201*^9, 3.711757754303265*^9}, 
+   3.711757798902129*^9, {3.711795675200489*^9, 3.71179568906942*^9}, 
+   3.711795945461894*^9, {3.7120151983473997`*^9, 3.712015207426742*^9}, {
+   3.712015248894932*^9, 3.7120152716135073`*^9}, {3.71202317118544*^9, 
+   3.712023182472164*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["A1c",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["A1cx",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            StyleBox["11",
+             FontColor->RGBColor[1, 0, 0]], "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["A1sx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/A1sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712022700369561*^9, 3.712022701331715*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "5"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["A1s",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["A1sx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         StyleBox["11",
+          FontColor->RGBColor[1, 0, 0]], "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.711757745381201*^9, 3.711757754303265*^9}, 
+   3.711757798902129*^9, {3.711795675200489*^9, 3.71179568906942*^9}, 
+   3.711795945461894*^9, {3.7120151983473997`*^9, 3.712015207426742*^9}, {
+   3.712015248894932*^9, 3.7120152716135073`*^9}, {3.712022702697567*^9, 
+   3.712022703239571*^9}, 3.7120231860688133`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["A1s",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["A1sx",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            StyleBox["11",
+             FontColor->RGBColor[1, 0, 0]], "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.71202270415324*^9, 3.712022705194097*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["dA1cx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/dA1cx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "10"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["dA1c",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["dA1cx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"11", "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.7117577824129133`*^9, 3.7117577939874363`*^9}, {
+   3.711757825937873*^9, 3.711757829863593*^9}, {3.711795700057976*^9, 
+   3.7117957051247253`*^9}, {3.711795936414692*^9, 3.7117959382196198`*^9}, {
+   3.712022737196128*^9, 3.712022774170499*^9}, 3.712023190391831*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["dA1c",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["dA1cx",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    StyleBox["dA1sx",
+     FontColor->RGBColor[1, 0, 0]], "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<~/Dropbox/Dielectric mathematica and latex \
+files/heisenberg/zero_E/dA1sx.xls\>\"", "]"}], ",", "1"}], "]"}]}], ";"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.712022853083198*^9, 3.712022853788925*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c1", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "5"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c2", "=", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "10"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    StyleBox["dA1s",
+     FontColor->RGBColor[1, 0, 0]], "[", 
+    RowBox[{"c1", ",", "c2", ",", "theta1"}], "]"}], "-", 
+   RowBox[{"ToExpression", "[", 
+    RowBox[{
+     StyleBox["dA1sx",
+      FontColor->RGBColor[1, 0, 0]], "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"11", "*", 
+         RowBox[{"(", 
+          RowBox[{"c1", "-", "1"}], ")"}]}], "+", "c2", "+", "1"}], ",", 
+       "3"}], "]"}], "]"}], "]"}]}], "//", "Simplify"}]}], "Input",
+ CellChangeTimes->{{3.7117577824129133`*^9, 3.7117577939874363`*^9}, {
+   3.711757825937873*^9, 3.711757829863593*^9}, {3.711795700057976*^9, 
+   3.7117957051247253`*^9}, {3.711795936414692*^9, 3.7117959382196198`*^9}, {
+   3.712022737196128*^9, 3.712022774170499*^9}, {3.7120228544727297`*^9, 
+   3.7120228548870277`*^9}, 3.7121836271520452`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["dA1s",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["dA1sx",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+     StyleBox[
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "10"}], "}"}],
+      FontColor->RGBColor[1, 0, 0]]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7120228552958317`*^9, 3.7120228564666023`*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell["sdfds", "Subsection",
+ CellChangeTimes->{{3.713631940123021*^9, 3.713631940389056*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["tste", "Section",
+ CellChangeTimes->{{3.7136319431629543`*^9, 3.713631943522499*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["zeor order", "Subsection",
+ CellChangeTimes->{{3.713631978737543*^9, 3.7136319840409317`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H0y", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H0y.xls\>\"", "]"}], ",", 
+     "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H0", "[", 
+      RowBox[{"0", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H0y", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711901588222185*^9, {3.7119671842675743`*^9, 3.711967185566413*^9}, {
+   3.71231789226087*^9, 3.7123179081882133`*^9}, {3.713613056939251*^9, 
+   3.713613092113523*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H0cy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H0cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H0c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H0cy", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.712317914700629*^9, 3.712317918761207*^9}, {
+  3.713613061051612*^9, 3.7136131019526978`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H0sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H0sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H0s", "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H0sy", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7123179291217813`*^9, 3.712317929319914*^9}, {
+  3.713613062691038*^9, 3.71361307669001*^9}, {3.713613110464512*^9, 
+  3.7136131145282087`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I0cchy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I0cchy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I0cch",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I0cchy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.712317945390335*^9, 3.712317945607958*^9}, {
+  3.7136132159649477`*^9, 3.7136132381715317`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I0schy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I0schy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I0sch",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I0schy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7119292398185043`*^9, 3.7119292562120323`*^9}, {
+  3.712317960188387*^9, 3.7123179604105387`*^9}, {3.713613220908805*^9, 
+  3.7136132458509808`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I0cshy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I0cshy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I0csh",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I0cshy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7123179730190363`*^9, 3.712317973225768*^9}, {
+  3.7136132213486032`*^9, 3.713613252938773*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["I0ssh",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I0sshy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I0ssh",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox[
+         RowBox[{
+          StyleBox["I0ssh",
+           FontColor->RGBColor[1, 0, 0]], "y"}]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.7119298483511877`*^9, {3.712317983852618*^9, 3.712317984079646*^9}, 
+   3.713613223492799*^9, {3.713613254762877*^9, 3.7136132577304373`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["F0sy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/F0sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["F0s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"F0sy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711965958926589*^9, 
+   3.711965959886602*^9}, {3.712317993541934*^9, 3.712317993763418*^9}, {
+   3.713613311576906*^9, 3.7136133216562*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["F0c",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/F0cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["F0c",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"F0cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.7123180063449383`*^9, 
+   3.7123180065804453`*^9}, {3.713613311880826*^9, 3.713613326135662*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["E0s",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/E0sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["E0s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox[
+        RowBox[{
+         StyleBox["E0s",
+          FontColor->RGBColor[1, 0, 0]], "y"}]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711931087843315*^9, 
+   3.7119310896510773`*^9}, {3.712318015906294*^9, 3.712318016134717*^9}, {
+   3.71361331254486*^9, 3.713613333335294*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["E0c",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/E0cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["E0c",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"E0cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.713613313456903*^9, 3.713613343550836*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A0cy0", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A0cy0.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A0cy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A0cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A0c", "[", 
+      RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A0cy0",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A0c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A0cy",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711896289468214*^9, 3.711931899814022*^9, 3.7119322392513723`*^9, {
+   3.712186515463974*^9, 3.7121865323685427`*^9}, {3.712318046645115*^9, 
+   3.712318046832699*^9}, {3.7136134500031776`*^9, 3.7136134503069687`*^9}, {
+   3.713613541158708*^9, 3.713613546702045*^9}, {3.713625935794986*^9, 
+   3.713625937074793*^9}, 3.713629595399948*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A0sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A0sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"A0s", "[", 
+    RowBox[{"0", ",", "j", ",", "theta1"}], "]"}], ":=", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["A0s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A0sy",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.711896462577117*^9, 3.711896470290187*^9}, 
+   3.7119318399649057`*^9, 3.711932260948926*^9, {3.712318056362398*^9, 
+   3.712318056576805*^9}, {3.713614030458498*^9, 3.7136140351532173`*^9}, {
+   3.7136259405584507`*^9, 3.7136259685705767`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dA0cy0", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA0cy0.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dA0cy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA0cy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA0c", "[", 
+      RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA0cy0", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA0c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA0cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.712186867433703*^9, 3.712186874272447*^9}, {
+   3.7123180694172153`*^9, 3.712318069602819*^9}, {3.713613451466831*^9, 
+   3.713613454234666*^9}, {3.713614041265082*^9, 3.713614055096533*^9}, 
+   3.7136296014470863`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dA0sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA0sy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dA0s", "[", 
+    RowBox[{"0", ",", "j", ",", "theta1"}], "]"}], ":=", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA0s", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA0sy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711897833190621*^9, 3.711897868580965*^9, {3.712318079435321*^9, 
+   3.712318079846013*^9}, 3.713613458474465*^9, {3.7136140473688087`*^9, 
+   3.7136140635920877`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["first order", "Subsection",
+ CellChangeTimes->{{3.713632170489011*^9, 3.713632174376915*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H1y", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H1y.xls\>\"", "]"}], ",", 
+     "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H1", "[", 
+      RowBox[{"0", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H1y", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711901588222185*^9, {3.7119671842675743`*^9, 3.711967185566413*^9}, {
+   3.71231789226087*^9, 3.7123179081882133`*^9}, {3.713613056939251*^9, 
+   3.713613092113523*^9}, {3.713614239288823*^9, 3.71361424086447*^9}, 
+   3.713629825293165*^9, 3.713629871364235*^9, 3.713629969471479*^9, {
+   3.713632019631927*^9, 3.713632024600178*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H1cy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H1cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H1c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H1cy", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.713629880618538*^9, 3.713629882830573*^9}, 
+   3.713629966881044*^9, {3.713630021640621*^9, 3.713630035132586*^9}, {
+   3.713632028687554*^9, 3.71363203180691*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.712317914700629*^9, 3.712317918761207*^9}, {
+   3.713613061051612*^9, 3.7136131019526978`*^9}, {3.713614241752735*^9, 
+   3.713614245360487*^9}, {3.7136293188823338`*^9, 3.713629358451419*^9}, {
+   3.713629857870948*^9, 3.713629862474944*^9}, 3.71362989374616*^9, 
+   3.7136299611349783`*^9, 3.713632027671369*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H1sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/H1sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"H1s", "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"H1sy", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7123179291217813`*^9, 3.712317929319914*^9}, {
+   3.713613062691038*^9, 3.71361307669001*^9}, {3.713613110464512*^9, 
+   3.7136131145282087`*^9}, {3.7136142538642*^9, 3.7136142555198402`*^9}, {
+   3.713629369936557*^9, 3.713629382963583*^9}, {3.7136299243447113`*^9, 
+   3.7136299912381783`*^9}, 3.7136300412507563`*^9, 3.7136302012703953`*^9, {
+   3.713632040759308*^9, 3.7136320437592793`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I1cchy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I1cchy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I1cch",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I1cchy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.712317945390335*^9, 3.712317945607958*^9}, {
+   3.7136132159649477`*^9, 3.7136132381715317`*^9}, {3.713614324518772*^9, 
+   3.7136143257571497`*^9}, {3.713630105969451*^9, 3.713630129064015*^9}, 
+   3.7136301806710997`*^9, 3.713630275058468*^9, {3.713630310856452*^9, 
+   3.713630328584779*^9}, {3.713632051270335*^9, 3.713632053566503*^9}}],
+
+Cell[BoxData["4"], "Output",
+ CellChangeTimes->{3.713630313048142*^9}],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.713630313050189*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "11980800"], 
+  RowBox[{
+   SuperscriptBox["bJ", "6"], " ", 
+   SuperscriptBox["bmu", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"390", " ", 
+       RowBox[{"BesselI", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"J", " ", "\[Beta]"}]}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", " ", "theta1"}], "]"}], "+", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"4", " ", "theta1"}], "]"}]}], ")"}]}], 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{"J", " ", "\[Beta]"}]}], "]"}]], "+", 
+     RowBox[{"7", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"39", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"2", " ", "theta1"}], "]"}]}], "+", 
+        RowBox[{"15", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", " ", "theta1"}], "]"}]}], "+", 
+        RowBox[{"88", " ", 
+         RowBox[{"Sinh", "[", 
+          RowBox[{"4", " ", "theta1"}], "]"}]}]}], ")"}]}]}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{3.7136303147619877`*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.713630314764077*^9}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.713632050334507*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I1schy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I1schy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I1sch",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I1schy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7119292398185043`*^9, 3.7119292562120323`*^9}, {
+  3.712317960188387*^9, 3.7123179604105387`*^9}, {3.713613220908805*^9, 
+  3.7136132458509808`*^9}, {3.713614326285016*^9, 3.713614327828927*^9}, {
+  3.713630368630426*^9, 3.713630437170439*^9}, {3.713632058262012*^9, 
+  3.7136320644619493`*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.713630395214834*^9, 3.7136304140640993`*^9}}],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{{3.713630395214834*^9, 3.713630414067173*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "153600"], 
+  RowBox[{
+   SuperscriptBox["bJ", "6"], " ", 
+   SuperscriptBox["bmu", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "7"}], " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"4", " ", "theta1"}], "]"}]}], "+", 
+     RowBox[{"7", " ", 
+      RowBox[{"Cosh", "[", 
+       RowBox[{"2", " ", "theta1"}], "]"}]}], "+", 
+     FractionBox[
+      RowBox[{"25", " ", 
+       RowBox[{"BesselI", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"J", " ", "\[Beta]"}]}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "theta1"}], "]"}]}], "+", 
+         RowBox[{"Cosh", "[", 
+          RowBox[{"2", " ", "theta1"}], "]"}]}], ")"}]}], 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{"J", " ", "\[Beta]"}]}], "]"}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{{3.713630395214834*^9, 3.7136304147154217`*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.713630395214834*^9, 3.713630414717909*^9}}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.713632056910194*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["I1cshy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I1cshy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I1csh",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox["I1cshy",
+         FontColor->RGBColor[1, 0, 0]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7123179730190363`*^9, 3.712317973225768*^9}, {
+  3.7136132213486032`*^9, 3.713613252938773*^9}, {3.713614328180985*^9, 
+  3.713614329060858*^9}, {3.713630447434763*^9, 3.713630476714802*^9}, {
+  3.713632068485709*^9, 3.713632071541184*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.713630472411625*^9}],
+
+Cell[BoxData["9"], "Output",
+ CellChangeTimes->{3.7136304724141893`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "6317015040"], 
+  RowBox[{
+   SuperscriptBox["bJ", "9"], " ", 
+   SuperscriptBox["bmu", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "9"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"119", " ", 
+         RowBox[{"Cos", "[", "theta1", "]"}]}], "+", 
+        RowBox[{"20", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"5", " ", "theta1"}], "]"}]}], "-", 
+        RowBox[{"139", " ", 
+         RowBox[{"Cosh", "[", 
+          RowBox[{"3", " ", "theta1"}], "]"}]}]}], ")"}]}], "+", 
+     FractionBox[
+      RowBox[{"952", " ", 
+       RowBox[{"BesselI", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"J", " ", "\[Beta]"}]}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"3", " ", "theta1"}], "]"}]}], "+", 
+         RowBox[{"Cosh", "[", 
+          RowBox[{"3", " ", "theta1"}], "]"}]}], ")"}]}], 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{"J", " ", "\[Beta]"}]}], "]"}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.713630473565859*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.713630473567937*^9}]
+}, Closed]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.713632067477839*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["I1ssh",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/I1sshy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["I1ssh",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{
+        StyleBox[
+         RowBox[{
+          StyleBox["I1ssh",
+           FontColor->RGBColor[1, 0, 0]], "y"}]], "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"11", "*", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+          "3"}], "]"}], "]"}], "]"}], "/.", 
+      RowBox[{"theta1", "\[Rule]", "xi"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.7119298483511877`*^9, {3.712317983852618*^9, 3.712317984079646*^9}, 
+   3.713613223492799*^9, {3.713613254762877*^9, 3.7136132577304373`*^9}, {
+   3.713614329260977*^9, 3.713614333660914*^9}, {3.713630502153133*^9, 
+   3.713630520339278*^9}, {3.7136320752292747`*^9, 3.7136320773897943`*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.7136305157028313`*^9}],
+
+Cell[BoxData["8"], "Output",
+ CellChangeTimes->{3.713630515704173*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  RowBox[{
+   FractionBox["1", "62668800"], 
+   RowBox[{
+    SuperscriptBox["bJ", "8"], " ", 
+    SuperscriptBox["bmu", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"102", " ", 
+       RowBox[{"Sin", "[", "theta1", "]"}]}], "-", 
+      RowBox[{"85", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"3", " ", "theta1"}], "]"}]}], "+", 
+      RowBox[{"15", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"5", " ", "theta1"}], "]"}]}], "+", 
+      RowBox[{"26", " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"3", " ", "theta1"}], "]"}]}]}], ")"}]}]}]}]], "Output",
+ CellChangeTimes->{3.713630516554701*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.713630516555612*^9}]
+}, Closed]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox["F1sy",
+    FontColor->RGBColor[1, 0, 0]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/F1sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["F1s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"F1sy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711965958926589*^9, 
+   3.711965959886602*^9}, {3.712317993541934*^9, 3.712317993763418*^9}, {
+   3.713613311576906*^9, 3.7136133216562*^9}, {3.7136282664472027`*^9, 
+   3.7136282722868347`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["F1c",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/F1cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["F1c",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"F1cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.7123180063449383`*^9, 
+   3.7123180065804453`*^9}, {3.713613311880826*^9, 3.713613326135662*^9}, {
+   3.713628273918784*^9, 3.71362827993466*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["E1s",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/E1sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["E1s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox[
+        RowBox[{
+         StyleBox["E1s",
+          FontColor->RGBColor[1, 0, 0]], "y"}]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.71193011688183*^9, 3.7119301227446012`*^9}, 
+   3.711930169512334*^9, 3.711930227495096*^9, {3.711930267823338*^9, 
+   3.7119302875933332`*^9}, 3.711930426890625*^9, 3.711930665389649*^9, {
+   3.7119308361384897`*^9, 3.711930840798998*^9}, {3.711931087843315*^9, 
+   3.7119310896510773`*^9}, {3.712318015906294*^9, 3.712318016134717*^9}, {
+   3.71361331254486*^9, 3.713613333335294*^9}, {3.713628282430628*^9, 
+   3.7136282867261*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["E1c",
+      FontColor->RGBColor[1, 0, 0]], "y"}]], "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/E1cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["E1c",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"E1cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.713613313456903*^9, 3.713613343550836*^9}, {
+  3.713628288574254*^9, 3.7136282927096653`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A1cy0", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A1cy0.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A1cy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A1cy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A1c", "[", 
+      RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A1cy0",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"j", "+", "1"}], ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A1c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A1cy",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711896289468214*^9, 3.711931899814022*^9, 3.7119322392513723`*^9, {
+   3.712186515463974*^9, 3.7121865323685427`*^9}, {3.712318046645115*^9, 
+   3.712318046832699*^9}, {3.7136134500031776`*^9, 3.7136134503069687`*^9}, {
+   3.713613541158708*^9, 3.713613546702045*^9}, {3.7136256813015137`*^9, 
+   3.7136256848053417`*^9}, {3.713625728931584*^9, 3.713625729795711*^9}, {
+   3.713626042150907*^9, 3.713626042414707*^9}, 3.713629572776373*^9, {
+   3.7136296996992807`*^9, 3.713629703210294*^9}, {3.713630557886429*^9, 
+   3.7136305725575953`*^9}, {3.713630931342926*^9, 3.7136310081549883`*^9}, 
+   3.7136311175082417`*^9, {3.713632107155407*^9, 3.71363211034007*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.713632106068578*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A1sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/A1sy.xls\>\"", "]"}], ",",
+      "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox["A1s",
+       FontColor->RGBColor[1, 0, 0]], "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       StyleBox["A1sy",
+        FontColor->RGBColor[1, 0, 0]], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.711896462577117*^9, 3.711896470290187*^9}, 
+   3.7119318399649057`*^9, 3.711932260948926*^9, {3.712318056362398*^9, 
+   3.712318056576805*^9}, {3.713614030458498*^9, 3.7136140351532173`*^9}, {
+   3.71362569883757*^9, 3.7136257051515713`*^9}, {3.713626025767667*^9, 
+   3.713626026399356*^9}, 3.713631244889474*^9, 3.7136313814998207`*^9, 
+   3.713631519823135*^9, {3.7136321164677877`*^9, 3.713632118387788*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Cosh", "[", 
+    RowBox[{"5", " ", "theta1"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"347", " ", 
+        SuperscriptBox["bJ", "10"], " ", 
+        SuperscriptBox["bmu", "2"], " ", 
+        RowBox[{"Sinh", "[", 
+         RowBox[{"10", " ", "\[Pi]"}], "]"}]}], "7790985216000"]}], "-", 
+     FractionBox[
+      RowBox[{"347", " ", 
+       SuperscriptBox["bJ", "10"], " ", 
+       SuperscriptBox["bmu", "2"], " ", 
+       SuperscriptBox[
+        RowBox[{"Sinh", "[", 
+         RowBox[{"5", " ", "\[Pi]"}], "]"}], "2"], " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"10", " ", "\[Pi]"}], "]"}]}], 
+      RowBox[{"3895492608000", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"Cosh", "[", 
+          RowBox[{"10", " ", "\[Pi]"}], "]"}]}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"347", " ", 
+       SuperscriptBox["bJ", "10"], " ", 
+       SuperscriptBox["bmu", "2"]}], "3895492608000"], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"Cosh", "[", 
+         RowBox[{"10", " ", "\[Pi]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"Csch", "[", 
+       RowBox[{"10", " ", "\[Pi]"}], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"347", " ", 
+           SuperscriptBox["bJ", "10"], " ", 
+           SuperscriptBox["bmu", "2"], " ", 
+           RowBox[{"Sinh", "[", 
+            RowBox[{"10", " ", "\[Pi]"}], "]"}]}], "7790985216000"]}], "-", 
+        FractionBox[
+         RowBox[{"347", " ", 
+          SuperscriptBox["bJ", "10"], " ", 
+          SuperscriptBox["bmu", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sinh", "[", 
+            RowBox[{"5", " ", "\[Pi]"}], "]"}], "2"], " ", 
+          RowBox[{"Sinh", "[", 
+           RowBox[{"10", " ", "\[Pi]"}], "]"}]}], 
+         RowBox[{"3895492608000", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"Cosh", "[", 
+             RowBox[{"10", " ", "\[Pi]"}], "]"}]}], ")"}]}]]}], ")"}]}]}], 
+    ")"}], " ", 
+   RowBox[{"Sinh", "[", 
+    RowBox[{"5", " ", "theta1"}], "]"}]}], "-", 
+  RowBox[{
+   FractionBox["1", "7790985216000"], 
+   RowBox[{
+    SuperscriptBox["bJ", "10"], " ", 
+    SuperscriptBox["bmu", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"7400", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"3", " ", "theta1"}], "]"}]}], "-", 
+      RowBox[{"6919", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"5", " ", "theta1"}], "]"}]}], "+", 
+      RowBox[{"1275", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"7", " ", "theta1"}], "]"}]}], "+", 
+      RowBox[{"694", " ", 
+       RowBox[{"Sinh", "[", 
+        RowBox[{"5", " ", "theta1"}], "]"}]}]}], ")"}]}]}]}]], "Output",
+ CellChangeTimes->{3.713631513578508*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.713631513590643*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{"dA1cy0", "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA1cy0.xls\>\"", "]"}], 
+      ",", "1"}], "]"}]}], ";"}],
+  FontColor->GrayLevel[0]], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"dA1cy", "=", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA1cy.xls\>\"", "]"}], 
+      ",", "1"}], "]"}]}], ";"}],
+  FontColor->GrayLevel[0]]}], "Input",
+ CellChangeTimes->{{3.712186867433703*^9, 3.712186874272447*^9}, {
+  3.7123180694172153`*^9, 3.712318069602819*^9}, {3.713613451466831*^9, 
+  3.713613454234666*^9}, {3.713614041265082*^9, 3.713614055096533*^9}, {
+  3.713625705820685*^9, 3.7136257086445923`*^9}, {3.71363123960194*^9, 
+  3.713631242401428*^9}, {3.713631428305233*^9, 3.7136314387044973`*^9}, {
+  3.713631678523432*^9, 3.713631731748417*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.713631513894953*^9}],
+
+Cell[BoxData["10"], "Output",
+ CellChangeTimes->{3.71363151389746*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["bJ", "10"], " ", 
+   SuperscriptBox["bmu", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"357", " ", 
+      RowBox[{"Sin", "[", "theta1", "]"}]}], "-", 
+     RowBox[{"935", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"3", " ", "theta1"}], "]"}]}], "+", 
+     RowBox[{"300", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"5", " ", "theta1"}], "]"}]}]}], ")"}]}], 
+  "63170150400"]], "Output",
+ CellChangeTimes->{3.713631638696047*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.713631638699177*^9}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.7136316736918917`*^9}]
+}, Closed]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA1c", "[", 
+      RowBox[{"0", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA1cy0", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"j", "+", "1"}], ",", "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA1c", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA1cy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], ";"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dA1sy", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", "\"\<~/Dropbox/Export/Y/dA1sy.xls\>\"", "]"}], 
+     ",", "1"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dA1s", "[", 
+      RowBox[{"n_", ",", "j_", ",", "theta1_"}], "]"}], ":=", 
+     RowBox[{"ToExpression", "[", 
+      RowBox[{"dA1sy", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"11", "*", 
+           RowBox[{"(", 
+            RowBox[{"n", "-", "1"}], ")"}]}], "+", "j", "+", "1"}], ",", 
+         "3"}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "0", ",", "10"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dA1s", "[", 
+    RowBox[{"0", ",", "j", ",", "theta1"}], "]"}], ":=", "0"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{
+  3.711897833190621*^9, 3.711897868580965*^9, {3.712318079435321*^9, 
+   3.712318079846013*^9}, 3.713613458474465*^9, {3.7136140473688087`*^9, 
+   3.7136140635920877`*^9}, {3.713625709564283*^9, 3.71362571457248*^9}, {
+   3.7136314903828993`*^9, 3.7136315092533913`*^9}, 3.713631827764575*^9, {
+   3.713632135794756*^9, 3.713632141290062*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{839, 949},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 284, 4, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[889, 30, 170, 2, 46, "Subsubsection"],
+Cell[1062, 34, 100, 1, 40, "Text"],
+Cell[1165, 37, 988, 30, 64, "Input"],
+Cell[2156, 69, 1119, 34, 64, "Input"],
+Cell[3278, 105, 1121, 34, 64, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4436, 144, 95, 1, 46, "Subsubsection"],
+Cell[4534, 147, 1340, 42, 64, "Input"],
+Cell[5877, 191, 1354, 41, 64, "Input"],
+Cell[7234, 234, 1301, 40, 64, "Input"],
+Cell[8538, 276, 1418, 45, 64, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9993, 326, 271, 4, 46, "Subsubsection"],
+Cell[10267, 332, 1472, 42, 64, "Input"],
+Cell[11742, 376, 1430, 42, 64, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13209, 423, 123, 2, 46, "Subsubsection"],
+Cell[13335, 427, 1583, 46, 64, "Input"],
+Cell[14921, 475, 1113, 37, 64, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16071, 517, 191, 3, 44, "Subsubsection"],
+Cell[16265, 522, 2036, 62, 114, "Input"],
+Cell[18304, 586, 1427, 43, 89, "Input"],
+Cell[19734, 631, 1848, 56, 114, "Input"],
+Cell[21585, 689, 1252, 39, 89, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[22886, 734, 299, 5, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[23210, 743, 220, 3, 37, "Subsubsection"],
+Cell[23433, 748, 1179, 25, 32, "Input"],
+Cell[24615, 775, 769, 24, 32, "Input"],
+Cell[25387, 801, 771, 24, 32, "Input"],
+Cell[26161, 827, 589, 16, 32, "Input"],
+Cell[26753, 845, 1137, 32, 55, "Input"],
+Cell[27893, 879, 1090, 32, 32, "Input"],
+Cell[28986, 913, 636, 16, 32, "Input"],
+Cell[29625, 931, 1531, 42, 77, "Input"],
+Cell[31159, 975, 1040, 31, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32236, 1011, 144, 2, 37, "Subsubsection"],
+Cell[32383, 1015, 351, 12, 32, "Input"],
+Cell[32737, 1029, 1298, 33, 77, "Input"],
+Cell[34038, 1064, 1043, 31, 32, "Input"],
+Cell[35084, 1097, 431, 13, 32, "Input"],
+Cell[35518, 1112, 1108, 30, 77, "Input"],
+Cell[36629, 1144, 1091, 32, 32, "Input"],
+Cell[37723, 1178, 351, 12, 32, "Input"],
+Cell[38077, 1192, 1129, 31, 77, "Input"],
+Cell[39209, 1225, 1042, 31, 32, "Input"],
+Cell[40254, 1258, 351, 12, 32, "Input"],
+Cell[40608, 1272, 1131, 31, 77, "Input"],
+Cell[41742, 1305, 1095, 32, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42874, 1342, 293, 4, 37, "Subsubsection"],
+Cell[43170, 1348, 1522, 43, 55, "Input"],
+Cell[44695, 1393, 1478, 42, 55, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46210, 1440, 145, 2, 37, "Subsubsection"],
+Cell[46358, 1444, 1635, 47, 55, "Input"],
+Cell[47996, 1493, 1179, 38, 55, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49212, 1536, 96, 1, 37, "Subsubsection"],
+Cell[49311, 1539, 347, 12, 32, "Input"],
+Cell[49661, 1553, 1217, 34, 77, "Input"],
+Cell[50881, 1589, 895, 28, 32, "Input"],
+Cell[51779, 1619, 413, 13, 32, "Input"],
+Cell[52195, 1634, 1241, 34, 77, "Input"],
+Cell[53439, 1670, 960, 29, 32, "Input"],
+Cell[54402, 1701, 349, 12, 32, "Input"],
+Cell[54754, 1715, 1139, 31, 77, "Input"],
+Cell[55896, 1748, 831, 26, 32, "Input"],
+Cell[56730, 1776, 415, 13, 32, "Input"],
+Cell[57148, 1791, 1195, 32, 77, "Input"],
+Cell[58346, 1825, 901, 27, 32, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[59274, 1856, 93, 1, 39, "Subsection"],
+Cell[CellGroupData[{
+Cell[59392, 1861, 91, 1, 53, "Section"],
+Cell[CellGroupData[{
+Cell[59508, 1866, 100, 1, 47, "Subsection"],
+Cell[59611, 1869, 895, 25, 55, "Input"],
+Cell[60509, 1896, 1015, 29, 77, "Input"],
+Cell[61527, 1927, 1065, 30, 77, "Input"],
+Cell[62595, 1959, 1185, 35, 99, "Input"],
+Cell[63783, 1996, 1238, 36, 99, "Input"],
+Cell[65024, 2034, 1185, 35, 99, "Input"],
+Cell[66212, 2071, 1317, 40, 99, "Input"],
+Cell[67532, 2113, 1320, 35, 77, "Input"],
+Cell[68855, 2150, 1313, 36, 77, "Input"],
+Cell[70171, 2188, 1461, 41, 77, "Input"],
+Cell[71635, 2231, 1016, 32, 77, "Input"],
+Cell[72654, 2265, 1947, 55, 121, "Input"],
+Cell[74604, 2322, 1348, 38, 99, "Input"],
+Cell[75955, 2362, 1720, 49, 121, "Input"],
+Cell[77678, 2413, 1168, 34, 99, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[78883, 2452, 99, 1, 39, "Subsection"],
+Cell[78985, 2455, 1060, 27, 55, "Input"],
+Cell[80048, 2484, 1085, 30, 77, "Input"],
+Cell[81136, 2516, 363, 5, 32, "Input"],
+Cell[81502, 2523, 1317, 33, 77, "Input"],
+Cell[CellGroupData[{
+Cell[82844, 2560, 1456, 39, 121, "Input"],
+Cell[84303, 2601, 70, 1, 38, "Output"],
+Cell[84376, 2604, 70, 1, 38, "Output"],
+Cell[84449, 2607, 1130, 35, 155, "Output"],
+Cell[85582, 2644, 70, 1, 38, "Output"]
+}, Closed]],
+Cell[85667, 2648, 68, 1, 26, "Input"],
+Cell[CellGroupData[{
+Cell[85760, 2653, 1384, 38, 99, "Input"],
+Cell[87147, 2693, 96, 1, 38, "Output"],
+Cell[87246, 2696, 94, 1, 38, "Output"],
+Cell[87343, 2699, 991, 30, 109, "Output"],
+Cell[88337, 2731, 94, 1, 38, "Output"]
+}, Closed]],
+Cell[88446, 2735, 68, 1, 26, "Input"],
+Cell[CellGroupData[{
+Cell[88539, 2740, 1329, 37, 99, "Input"],
+Cell[89871, 2779, 70, 1, 38, "Output"],
+Cell[89944, 2782, 72, 1, 38, "Output"],
+Cell[90019, 2785, 1145, 35, 154, "Output"],
+Cell[91167, 2822, 70, 1, 38, "Output"]
+}, Closed]],
+Cell[91252, 2826, 68, 1, 26, "Input"],
+Cell[CellGroupData[{
+Cell[91345, 2831, 1493, 43, 121, "Input"],
+Cell[92841, 2876, 72, 1, 38, "Output"],
+Cell[92916, 2879, 70, 1, 38, "Output"],
+Cell[92989, 2882, 655, 20, 84, "Output"],
+Cell[93647, 2904, 70, 1, 38, "Output"]
+}, Closed]],
+Cell[93732, 2908, 1374, 36, 71, "Input"],
+Cell[95109, 2946, 1362, 37, 77, "Input"],
+Cell[96474, 2985, 1509, 42, 77, "Input"],
+Cell[97986, 3029, 1067, 33, 77, "Input"],
+Cell[99056, 3064, 2272, 59, 121, "Input"],
+Cell[101331, 3125, 68, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[101424, 3130, 1372, 35, 77, "Input"],
+Cell[102799, 3167, 2928, 87, 322, "Output"],
+Cell[105730, 3256, 70, 1, 38, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[105837, 3262, 919, 22, 49, "Input"],
+Cell[106759, 3286, 70, 1, 38, "Output"],
+Cell[106832, 3289, 70, 1, 38, "Output"],
+Cell[106905, 3292, 506, 16, 60, "Output"],
+Cell[107414, 3310, 70, 1, 38, "Output"],
+Cell[107487, 3313, 72, 1, 38, "Output"]
+}, Closed]],
+Cell[107574, 3317, 1058, 33, 71, "Input"],
+Cell[108635, 3352, 1342, 37, 99, "Input"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

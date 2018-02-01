@@ -1,0 +1,1402 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     54452,       1393]
+NotebookOptionsPosition[     53300,       1352]
+NotebookOutlinePosition[     53663,       1368]
+CellTagsIndexPosition[     53620,       1365]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.684063801303211*^9, 3.684063809892828*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "correlation espression \[Rho] in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "/", 
+    SuperscriptBox["cm", "3"]}], TraditionalForm]]],
+ " and T in K"
+}], "Subsection",
+ CellChangeTimes->{{3.684066654096293*^9, 3.684066701086061*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Epsilon]c", "[", 
+    RowBox[{"T_", ",", "\[Rho]_"}], "]"}], "=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "-", 
+      RowBox[{"0.8235371369683173`", " ", "\[Rho]"}]}]], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"1.0294214212103967`", " ", "\[Rho]"}], "+", 
+      RowBox[{
+       FractionBox["1", "T"], 
+       RowBox[{"10302.172246903372`", " ", "\[Rho]", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          FractionBox[
+           RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+          RowBox[{"15.322330895079466`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+          RowBox[{"7.856897668412108`*^6", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+          FractionBox[
+           RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+          RowBox[{"113464.60322878143`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+           SuperscriptBox["\[Rho]", "2"]}], "-", 
+          RowBox[{"147034.04617955844`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+           SuperscriptBox["\[Rho]", "3"]}], "-", 
+          RowBox[{"3.473252484583361`*^7", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+           SuperscriptBox["\[Rho]", "3"]}], "+", 
+          FractionBox[
+           RowBox[{"3.6976857532583666`*^6", " ", 
+            SuperscriptBox["\[Rho]", "4"]}], 
+           SuperscriptBox["T", "2"]], "-", 
+          FractionBox[
+           RowBox[{"1.1860207863800817`*^6", " ", 
+            SuperscriptBox["\[Rho]", "5"]}], 
+           SuperscriptBox["T", "2"]], "+", 
+          FractionBox[
+           RowBox[{"1.6812538671080532`*^12", " ", 
+            SuperscriptBox["\[Rho]", "6"]}], 
+           SuperscriptBox["T", "5"]], "+", 
+          RowBox[{"6.6435403650343865`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+           SuperscriptBox["\[Rho]", "7"]}], "-", 
+          FractionBox[
+           RowBox[{"1.3233230608637106`*^23", " ", 
+            SuperscriptBox["\[Rho]", "10"]}], 
+           SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{"9", "+", 
+         RowBox[{"3.705917116357428`", " ", "\[Rho]"}], "+", 
+         RowBox[{"0.38149504648085986`", " ", 
+          SuperscriptBox["\[Rho]", "2"]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], 
+          RowBox[{"20604.344493806744`", " ", "\[Rho]", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+             RowBox[{"15.322330895079466`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+             
+             RowBox[{"7.856897668412108`*^6", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+             FractionBox[
+              RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+             RowBox[{"113464.60322878143`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "2"]}], "-", 
+             RowBox[{"147034.04617955844`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "-", 
+             RowBox[{"3.473252484583361`*^7", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "+", 
+             FractionBox[
+              RowBox[{"3.6976857532583666`*^6", " ", 
+               SuperscriptBox["\[Rho]", "4"]}], 
+              SuperscriptBox["T", "2"]], "-", 
+             FractionBox[
+              RowBox[{"1.1860207863800817`*^6", " ", 
+               SuperscriptBox["\[Rho]", "5"]}], 
+              SuperscriptBox["T", "2"]], "+", 
+             FractionBox[
+              RowBox[{"1.6812538671080532`*^12", " ", 
+               SuperscriptBox["\[Rho]", "6"]}], 
+              SuperscriptBox["T", "5"]], "+", 
+             RowBox[{"6.6435403650343865`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+              SuperscriptBox["\[Rho]", "7"]}], "-", 
+             FractionBox[
+              RowBox[{"1.3233230608637106`*^23", " ", 
+               SuperscriptBox["\[Rho]", "10"]}], 
+              SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], 
+          RowBox[{"21210.55359192315`", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+             RowBox[{"15.322330895079466`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+             
+             RowBox[{"7.856897668412108`*^6", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+             FractionBox[
+              RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+             RowBox[{"113464.60322878143`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "2"]}], "-", 
+             RowBox[{"147034.04617955844`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "-", 
+             RowBox[{"3.473252484583361`*^7", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "+", 
+             FractionBox[
+              RowBox[{"3.6976857532583666`*^6", " ", 
+               SuperscriptBox["\[Rho]", "4"]}], 
+              SuperscriptBox["T", "2"]], "-", 
+             FractionBox[
+              RowBox[{"1.1860207863800817`*^6", " ", 
+               SuperscriptBox["\[Rho]", "5"]}], 
+              SuperscriptBox["T", "2"]], "+", 
+             FractionBox[
+              RowBox[{"1.6812538671080532`*^12", " ", 
+               SuperscriptBox["\[Rho]", "6"]}], 
+              SuperscriptBox["T", "5"]], "+", 
+             RowBox[{"6.6435403650343865`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+              SuperscriptBox["\[Rho]", "7"]}], "-", 
+             FractionBox[
+              RowBox[{"1.3233230608637106`*^23", " ", 
+               SuperscriptBox["\[Rho]", "10"]}], 
+              SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+         RowBox[{
+          FractionBox["1", 
+           SuperscriptBox["T", "2"]], 
+          RowBox[{"1.0613475300486608`*^8", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "+", 
+              FractionBox[
+               RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+              RowBox[{"15.322330895079466`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+              RowBox[{"7.856897668412108`*^6", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+              
+              FractionBox[
+               RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+              RowBox[{"113464.60322878143`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+               SuperscriptBox["\[Rho]", "2"]}], "-", 
+              RowBox[{"147034.04617955844`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+               SuperscriptBox["\[Rho]", "3"]}], "-", 
+              RowBox[{"3.473252484583361`*^7", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+               SuperscriptBox["\[Rho]", "3"]}], "+", 
+              FractionBox[
+               RowBox[{"3.6976857532583666`*^6", " ", 
+                SuperscriptBox["\[Rho]", "4"]}], 
+               SuperscriptBox["T", "2"]], "-", 
+              FractionBox[
+               RowBox[{"1.1860207863800817`*^6", " ", 
+                SuperscriptBox["\[Rho]", "5"]}], 
+               SuperscriptBox["T", "2"]], "+", 
+              FractionBox[
+               RowBox[{"1.6812538671080532`*^12", " ", 
+                SuperscriptBox["\[Rho]", "6"]}], 
+               SuperscriptBox["T", "5"]], "+", 
+              RowBox[{"6.6435403650343865`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+               SuperscriptBox["\[Rho]", "7"]}], "-", 
+              FractionBox[
+               RowBox[{"1.3233230608637106`*^23", " ", 
+                SuperscriptBox["\[Rho]", "10"]}], 
+               SuperscriptBox["T", "10"]]}], ")"}], "2"]}]}]}], ")"}]}]}], 
+     ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6840671499706707`*^9, 3.68406715506735*^9}, {
+  3.684067505412422*^9, 3.6840675164038277`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "-", 
+      RowBox[{"0.8235371369683173`", " ", "\[Rho]"}]}]], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"1.0294214212103967`", " ", "\[Rho]"}], "+", 
+      RowBox[{
+       FractionBox["1", "T"], 
+       RowBox[{"10302.172246903372`", " ", "\[Rho]", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          FractionBox[
+           RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+          RowBox[{"15.322330895079466`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+          RowBox[{"7.856897668412108`*^6", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+          FractionBox[
+           RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+          RowBox[{"113464.60322878143`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+           SuperscriptBox["\[Rho]", "2"]}], "-", 
+          RowBox[{"147034.04617955844`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+           SuperscriptBox["\[Rho]", "3"]}], "-", 
+          RowBox[{"3.473252484583361`*^7", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+           SuperscriptBox["\[Rho]", "3"]}], "+", 
+          FractionBox[
+           RowBox[{"3.6976857532583666`*^6", " ", 
+            SuperscriptBox["\[Rho]", "4"]}], 
+           SuperscriptBox["T", "2"]], "-", 
+          FractionBox[
+           RowBox[{"1.1860207863800817`*^6", " ", 
+            SuperscriptBox["\[Rho]", "5"]}], 
+           SuperscriptBox["T", "2"]], "+", 
+          FractionBox[
+           RowBox[{"1.6812538671080532`*^12", " ", 
+            SuperscriptBox["\[Rho]", "6"]}], 
+           SuperscriptBox["T", "5"]], "+", 
+          RowBox[{"6.6435403650343865`", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+           SuperscriptBox["\[Rho]", "7"]}], "-", 
+          FractionBox[
+           RowBox[{"1.3233230608637106`*^23", " ", 
+            SuperscriptBox["\[Rho]", "10"]}], 
+           SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{"9", "+", 
+         RowBox[{"3.705917116357428`", " ", "\[Rho]"}], "+", 
+         RowBox[{"0.38149504648085986`", " ", 
+          SuperscriptBox["\[Rho]", "2"]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], 
+          RowBox[{"20604.344493806744`", " ", "\[Rho]", " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+             RowBox[{"15.322330895079466`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+             
+             RowBox[{"7.856897668412108`*^6", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+             FractionBox[
+              RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+             RowBox[{"113464.60322878143`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "2"]}], "-", 
+             RowBox[{"147034.04617955844`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "-", 
+             RowBox[{"3.473252484583361`*^7", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "+", 
+             FractionBox[
+              RowBox[{"3.6976857532583666`*^6", " ", 
+               SuperscriptBox["\[Rho]", "4"]}], 
+              SuperscriptBox["T", "2"]], "-", 
+             FractionBox[
+              RowBox[{"1.1860207863800817`*^6", " ", 
+               SuperscriptBox["\[Rho]", "5"]}], 
+              SuperscriptBox["T", "2"]], "+", 
+             FractionBox[
+              RowBox[{"1.6812538671080532`*^12", " ", 
+               SuperscriptBox["\[Rho]", "6"]}], 
+              SuperscriptBox["T", "5"]], "+", 
+             RowBox[{"6.6435403650343865`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+              SuperscriptBox["\[Rho]", "7"]}], "-", 
+             FractionBox[
+              RowBox[{"1.3233230608637106`*^23", " ", 
+               SuperscriptBox["\[Rho]", "10"]}], 
+              SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], 
+          RowBox[{"21210.55359192315`", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+             RowBox[{"15.322330895079466`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+             
+             RowBox[{"7.856897668412108`*^6", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+             FractionBox[
+              RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+             RowBox[{"113464.60322878143`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "2"]}], "-", 
+             RowBox[{"147034.04617955844`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "-", 
+             RowBox[{"3.473252484583361`*^7", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+              SuperscriptBox["\[Rho]", "3"]}], "+", 
+             FractionBox[
+              RowBox[{"3.6976857532583666`*^6", " ", 
+               SuperscriptBox["\[Rho]", "4"]}], 
+              SuperscriptBox["T", "2"]], "-", 
+             FractionBox[
+              RowBox[{"1.1860207863800817`*^6", " ", 
+               SuperscriptBox["\[Rho]", "5"]}], 
+              SuperscriptBox["T", "2"]], "+", 
+             FractionBox[
+              RowBox[{"1.6812538671080532`*^12", " ", 
+               SuperscriptBox["\[Rho]", "6"]}], 
+              SuperscriptBox["T", "5"]], "+", 
+             RowBox[{"6.6435403650343865`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+              SuperscriptBox["\[Rho]", "7"]}], "-", 
+             FractionBox[
+              RowBox[{"1.3233230608637106`*^23", " ", 
+               SuperscriptBox["\[Rho]", "10"]}], 
+              SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+         RowBox[{
+          FractionBox["1", 
+           SuperscriptBox["T", "2"]], 
+          RowBox[{"1.0613475300486608`*^8", " ", 
+           SuperscriptBox["\[Rho]", "2"], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "+", 
+              FractionBox[
+               RowBox[{"0.006089953553602484`", " ", "\[Rho]"}], 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+              RowBox[{"15.322330895079466`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "0.25`"], " ", "\[Rho]"}], "+", 
+              RowBox[{"7.856897668412108`*^6", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "2.5`"], " ", "\[Rho]"}], "-", 
+              
+              FractionBox[
+               RowBox[{"1924.7516413293324`", " ", "\[Rho]"}], "T"], "+", 
+              RowBox[{"113464.60322878143`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+               SuperscriptBox["\[Rho]", "2"]}], "-", 
+              RowBox[{"147034.04617955844`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+               SuperscriptBox["\[Rho]", "3"]}], "-", 
+              RowBox[{"3.473252484583361`*^7", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+               SuperscriptBox["\[Rho]", "3"]}], "+", 
+              FractionBox[
+               RowBox[{"3.6976857532583666`*^6", " ", 
+                SuperscriptBox["\[Rho]", "4"]}], 
+               SuperscriptBox["T", "2"]], "-", 
+              FractionBox[
+               RowBox[{"1.1860207863800817`*^6", " ", 
+                SuperscriptBox["\[Rho]", "5"]}], 
+               SuperscriptBox["T", "2"]], "+", 
+              FractionBox[
+               RowBox[{"1.6812538671080532`*^12", " ", 
+                SuperscriptBox["\[Rho]", "6"]}], 
+               SuperscriptBox["T", "5"]], "+", 
+              RowBox[{"6.6435403650343865`", " ", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+               SuperscriptBox["\[Rho]", "7"]}], "-", 
+              FractionBox[
+               RowBox[{"1.3233230608637106`*^23", " ", 
+                SuperscriptBox["\[Rho]", "10"]}], 
+               SuperscriptBox["T", "10"]]}], ")"}], "2"]}]}]}], ")"}]}]}], 
+     ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6951395655214787`*^9, 3.695139566466366*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Rho]", "=", 
+   RowBox[{"x", "*", 
+    RowBox[{"18.015268", "/", "1000"}]}]}], 
+  ";"}], "\[IndentingNewLine]", "y"}], "Input",
+ CellChangeTimes->{{3.6951395300742826`*^9, 3.695139572448394*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"4", "-", 
+    RowBox[{"0.014836242230436945`", " ", "x"}]}]], 
+  RowBox[{"(", 
+   RowBox[{"1", "+", 
+    RowBox[{"0.018545302788046183`", " ", "x"}], "+", 
+    RowBox[{
+     FractionBox["1", "T"], 
+     RowBox[{"185.59639401012643`", " ", "x", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        FractionBox[
+         RowBox[{"0.00010971214537570111`", " ", "x"}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+        RowBox[{"0.2760358974595365`", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+        RowBox[{"141544.11714501926`", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+        FractionBox[
+         RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+        RowBox[{"36.8249234883013`", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+         SuperscriptBox["x", "2"]}], "-", 
+        RowBox[{"0.8596864668869265`", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+         SuperscriptBox["x", "3"]}], "-", 
+        RowBox[{"203.07597013492426`", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+         SuperscriptBox["x", "3"]}], "+", 
+        FractionBox[
+         RowBox[{"0.38948694803492984`", " ", 
+          SuperscriptBox["x", "4"]}], 
+         SuperscriptBox["T", "2"]], "-", 
+        FractionBox[
+         RowBox[{"0.0022505876768481015`", " ", 
+          SuperscriptBox["x", "5"]}], 
+         SuperscriptBox["T", "2"]], "+", 
+        FractionBox[
+         RowBox[{"57.47482524050228`", " ", 
+          SuperscriptBox["x", "6"]}], 
+         SuperscriptBox["T", "5"]], "+", 
+        RowBox[{"4.091519905344706`*^-12", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+         SuperscriptBox["x", "7"]}], "-", 
+        FractionBox[
+         RowBox[{"476511.24372519157`", " ", 
+          SuperscriptBox["x", "10"]}], 
+         SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+    RowBox[{"\[Sqrt]", 
+     RowBox[{"(", 
+      RowBox[{"9", "+", 
+       RowBox[{"0.06676309003696625`", " ", "x"}], "+", 
+       RowBox[{"0.00012381417198011285`", " ", 
+        SuperscriptBox["x", "2"]}], "+", 
+       RowBox[{
+        FractionBox["1", "T"], 
+        RowBox[{"371.19278802025286`", " ", "x", " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           FractionBox[
+            RowBox[{"0.00010971214537570111`", " ", "x"}], 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+           RowBox[{"0.2760358974595365`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+           RowBox[{"141544.11714501926`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+           FractionBox[
+            RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+           RowBox[{"36.8249234883013`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+            SuperscriptBox["x", "2"]}], "-", 
+           RowBox[{"0.8596864668869265`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+            SuperscriptBox["x", "3"]}], "-", 
+           RowBox[{"203.07597013492426`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+            SuperscriptBox["x", "3"]}], "+", 
+           FractionBox[
+            RowBox[{"0.38948694803492984`", " ", 
+             SuperscriptBox["x", "4"]}], 
+            SuperscriptBox["T", "2"]], "-", 
+           FractionBox[
+            RowBox[{"0.0022505876768481015`", " ", 
+             SuperscriptBox["x", "5"]}], 
+            SuperscriptBox["T", "2"]], "+", 
+           FractionBox[
+            RowBox[{"57.47482524050228`", " ", 
+             SuperscriptBox["x", "6"]}], 
+            SuperscriptBox["T", "5"]], "+", 
+           RowBox[{"4.091519905344706`*^-12", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+            SuperscriptBox["x", "7"]}], "-", 
+           FractionBox[
+            RowBox[{"476511.24372519157`", " ", 
+             SuperscriptBox["x", "10"]}], 
+            SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+       RowBox[{
+        FractionBox["1", "T"], 
+        RowBox[{"6.883882646574632`", " ", 
+         SuperscriptBox["x", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           FractionBox[
+            RowBox[{"0.00010971214537570111`", " ", "x"}], 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+           RowBox[{"0.2760358974595365`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+           RowBox[{"141544.11714501926`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+           FractionBox[
+            RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+           RowBox[{"36.8249234883013`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+            SuperscriptBox["x", "2"]}], "-", 
+           RowBox[{"0.8596864668869265`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+            SuperscriptBox["x", "3"]}], "-", 
+           RowBox[{"203.07597013492426`", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+            SuperscriptBox["x", "3"]}], "+", 
+           FractionBox[
+            RowBox[{"0.38948694803492984`", " ", 
+             SuperscriptBox["x", "4"]}], 
+            SuperscriptBox["T", "2"]], "-", 
+           FractionBox[
+            RowBox[{"0.0022505876768481015`", " ", 
+             SuperscriptBox["x", "5"]}], 
+            SuperscriptBox["T", "2"]], "+", 
+           FractionBox[
+            RowBox[{"57.47482524050228`", " ", 
+             SuperscriptBox["x", "6"]}], 
+            SuperscriptBox["T", "5"]], "+", 
+           RowBox[{"4.091519905344706`*^-12", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+            SuperscriptBox["x", "7"]}], "-", 
+           FractionBox[
+            RowBox[{"476511.24372519157`", " ", 
+             SuperscriptBox["x", "10"]}], 
+            SuperscriptBox["T", "10"]]}], ")"}]}]}], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox["T", "2"]], 
+        RowBox[{"34446.021469562096`", " ", 
+         SuperscriptBox["x", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            FractionBox[
+             RowBox[{"0.00010971214537570111`", " ", "x"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+            RowBox[{"0.2760358974595365`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+            RowBox[{"141544.11714501926`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+            FractionBox[
+             RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+            RowBox[{"36.8249234883013`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "2"]}], "-", 
+            RowBox[{"0.8596864668869265`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "-", 
+            RowBox[{"203.07597013492426`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "+", 
+            FractionBox[
+             RowBox[{"0.38948694803492984`", " ", 
+              SuperscriptBox["x", "4"]}], 
+             SuperscriptBox["T", "2"]], "-", 
+            FractionBox[
+             RowBox[{"0.0022505876768481015`", " ", 
+              SuperscriptBox["x", "5"]}], 
+             SuperscriptBox["T", "2"]], "+", 
+            FractionBox[
+             RowBox[{"57.47482524050228`", " ", 
+              SuperscriptBox["x", "6"]}], 
+             SuperscriptBox["T", "5"]], "+", 
+            RowBox[{"4.091519905344706`*^-12", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+             SuperscriptBox["x", "7"]}], "-", 
+            FractionBox[
+             RowBox[{"476511.24372519157`", " ", 
+              SuperscriptBox["x", "10"]}], 
+             SuperscriptBox["T", "10"]]}], ")"}], "2"]}]}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{{3.695139574500291*^9, 3.6951395945400667`*^9}, 
+   3.695139691397326*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Epsilon]", "[", 
+    RowBox[{"T_", ",", "x_"}], "]"}], "=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"4", "-", 
+      RowBox[{"0.014836242230436945`", " ", "x"}]}]], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"0.018545302788046183`", " ", "x"}], "+", 
+      RowBox[{
+       FractionBox["1", "T"], "185.59639401012643`", " ", "x", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         FractionBox[
+          RowBox[{"0.00010971214537570111`", " ", "x"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+         RowBox[{"0.2760358974595365`", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+         RowBox[{"141544.11714501926`", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+         FractionBox[
+          RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+         RowBox[{"36.8249234883013`", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+          SuperscriptBox["x", "2"]}], "-", 
+         RowBox[{"0.8596864668869265`", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+          SuperscriptBox["x", "3"]}], "-", 
+         RowBox[{"203.07597013492426`", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+          SuperscriptBox["x", "3"]}], "+", 
+         FractionBox[
+          RowBox[{"0.38948694803492984`", " ", 
+           SuperscriptBox["x", "4"]}], 
+          SuperscriptBox["T", "2"]], "-", 
+         FractionBox[
+          RowBox[{"0.0022505876768481015`", " ", 
+           SuperscriptBox["x", "5"]}], 
+          SuperscriptBox["T", "2"]], "+", 
+         FractionBox[
+          RowBox[{"57.47482524050228`", " ", 
+           SuperscriptBox["x", "6"]}], 
+          SuperscriptBox["T", "5"]], "+", 
+         RowBox[{"4.091519905344706`*^-12", " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+          SuperscriptBox["x", "7"]}], "-", 
+         FractionBox[
+          RowBox[{"476511.24372519157`", " ", 
+           SuperscriptBox["x", "10"]}], 
+          SuperscriptBox["T", "10"]]}], ")"}]}], "+", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{"9", "+", 
+         RowBox[{"0.06676309003696625`", " ", "x"}], "+", 
+         RowBox[{"0.00012381417198011285`", " ", 
+          SuperscriptBox["x", "2"]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], "371.19278802025286`", " ", "x", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            FractionBox[
+             RowBox[{"0.00010971214537570111`", " ", "x"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+            RowBox[{"0.2760358974595365`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+            RowBox[{"141544.11714501926`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+            FractionBox[
+             RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+            RowBox[{"36.8249234883013`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "2"]}], "-", 
+            RowBox[{"0.8596864668869265`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "-", 
+            RowBox[{"203.07597013492426`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "+", 
+            FractionBox[
+             RowBox[{"0.38948694803492984`", " ", 
+              SuperscriptBox["x", "4"]}], 
+             SuperscriptBox["T", "2"]], "-", 
+            FractionBox[
+             RowBox[{"0.0022505876768481015`", " ", 
+              SuperscriptBox["x", "5"]}], 
+             SuperscriptBox["T", "2"]], "+", 
+            FractionBox[
+             RowBox[{"57.47482524050228`", " ", 
+              SuperscriptBox["x", "6"]}], 
+             SuperscriptBox["T", "5"]], "+", 
+            RowBox[{"4.091519905344706`*^-12", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+             SuperscriptBox["x", "7"]}], "-", 
+            FractionBox[
+             RowBox[{"476511.24372519157`", " ", 
+              SuperscriptBox["x", "10"]}], 
+             SuperscriptBox["T", "10"]]}], ")"}]}], "+", 
+         RowBox[{
+          FractionBox["1", "T"], "6.883882646574632`", " ", 
+          SuperscriptBox["x", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            FractionBox[
+             RowBox[{"0.00010971214537570111`", " ", "x"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+            RowBox[{"0.2760358974595365`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+            RowBox[{"141544.11714501926`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+            FractionBox[
+             RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+            RowBox[{"36.8249234883013`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "2"]}], "-", 
+            RowBox[{"0.8596864668869265`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "-", 
+            RowBox[{"203.07597013492426`", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+             SuperscriptBox["x", "3"]}], "+", 
+            FractionBox[
+             RowBox[{"0.38948694803492984`", " ", 
+              SuperscriptBox["x", "4"]}], 
+             SuperscriptBox["T", "2"]], "-", 
+            FractionBox[
+             RowBox[{"0.0022505876768481015`", " ", 
+              SuperscriptBox["x", "5"]}], 
+             SuperscriptBox["T", "2"]], "+", 
+            FractionBox[
+             RowBox[{"57.47482524050228`", " ", 
+              SuperscriptBox["x", "6"]}], 
+             SuperscriptBox["T", "5"]], "+", 
+            RowBox[{"4.091519905344706`*^-12", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+             SuperscriptBox["x", "7"]}], "-", 
+            FractionBox[
+             RowBox[{"476511.24372519157`", " ", 
+              SuperscriptBox["x", "10"]}], 
+             SuperscriptBox["T", "10"]]}], ")"}]}], "+", 
+         RowBox[{
+          FractionBox["1", 
+           SuperscriptBox["T", "2"]], "34446.021469562096`", " ", 
+          SuperscriptBox["x", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"0.00010971214537570111`", " ", "x"}], 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 FractionBox["T", "228"]}], ")"}], "1.2`"]], "+", 
+             RowBox[{"0.2760358974595365`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.25`"], " ", "x"}], "+", 
+             RowBox[{"141544.11714501926`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", "x"}], "-", 
+             FractionBox[
+              RowBox[{"34.6749166519878`", " ", "x"}], "T"], "+", 
+             RowBox[{"36.8249234883013`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["x", "2"]}], "-", 
+             RowBox[{"0.8596864668869265`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "1.5`"], " ", 
+              SuperscriptBox["x", "3"]}], "-", 
+             RowBox[{"203.07597013492426`", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "2.5`"], " ", 
+              SuperscriptBox["x", "3"]}], "+", 
+             FractionBox[
+              RowBox[{"0.38948694803492984`", " ", 
+               SuperscriptBox["x", "4"]}], 
+              SuperscriptBox["T", "2"]], "-", 
+             FractionBox[
+              RowBox[{"0.0022505876768481015`", " ", 
+               SuperscriptBox["x", "5"]}], 
+              SuperscriptBox["T", "2"]], "+", 
+             FractionBox[
+              RowBox[{"57.47482524050228`", " ", 
+               SuperscriptBox["x", "6"]}], 
+              SuperscriptBox["T", "5"]], "+", 
+             RowBox[{"4.091519905344706`*^-12", " ", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox["1", "T"], ")"}], "0.5`"], " ", 
+              SuperscriptBox["x", "7"]}], "-", 
+             FractionBox[
+              RowBox[{"476511.24372519157`", " ", 
+               SuperscriptBox["x", "10"]}], 
+              SuperscriptBox["T", "10"]]}], ")"}], "2"]}]}], ")"}]}]}], 
+     ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6951394882934017`*^9, 3.6951395199389668`*^9}, {
+  3.695139581920142*^9, 3.6951395929370317`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+list of correlation result0.000001,0.00001,0.00005,0.0001,0.001,0.01,0.4,0.9,1\
+\>", "Subsection",
+ CellChangeTimes->{{3.684066709653762*^9, 3.6840667173016663`*^9}, 
+   3.695137946482399*^9}],
+
+Cell[CellGroupData[{
+
+Cell["isothermal", "Subsubsection",
+ CellChangeTimes->{{3.684084292352621*^9, 3.684084293872252*^9}, 
+   3.695137645107156*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\</usr/users/weisongl/isothermal_500.dat\>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"\[Epsilon]", "[", 
+       RowBox[{"500", ",", "\[Rho]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Rho]", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.1", ",", "0.2", ",", "0.3", ",", "0.4", ",", "0.5", ",", "0.6", 
+          ",", "0.7"}], "}"}]}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\</usr/users/weisongl/isothermal_680.dat\>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"\[Epsilon]", "[", 
+       RowBox[{"680", ",", "\[Rho]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Rho]", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",",
+           "8", ",", "9", ",", "10", ",", "11", ",", "12", ",", "13", ",", 
+          "14", ",", "15", ",", "16", ",", "17", ",", "18", ",", "19", ",", 
+          "20"}], "}"}]}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\</usr/users/weisongl/isothermal_800.dat\>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"\[Epsilon]", "[", 
+       RowBox[{"800", ",", "\[Rho]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Rho]", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",",
+           "8", ",", "9", ",", "10", ",", "11", ",", "12", ",", "13", ",", 
+          "14", ",", "15", ",", "16", ",", "17", ",", "18", ",", "19", ",", 
+          "20"}], "}"}]}], "}"}]}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.695137646960367*^9, 3.6951376732754307`*^9}, {
+   3.695137761537472*^9, 3.6951377668653517`*^9}, 3.695137841869772*^9, {
+   3.695137878548194*^9, 3.695137932569964*^9}, {3.695137981839973*^9, 
+   3.695137984527425*^9}, 3.695138095706792*^9, {3.6951382283326883`*^9, 
+   3.6951382333644123`*^9}, {3.695139678596366*^9, 3.695139751720724*^9}, {
+   3.695143615771736*^9, 3.695143649257628*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+    "\"\</usr/users/weisongl/dielectric_constant/water/isothermal/isothermal_\
+500.dat\>\"", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"\[Epsilon]c", "[", 
+        RowBox[{"500", ",", "\[Rho]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Rho]", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "0.000001", ",", "0.00001", ",", "0.00005", ",", "0.0001", ",", 
+           "0.001", ",", "0.01", ",", "0.4", ",", "0.9", ",", "1"}], "}"}]}], 
+        "}"}]}], "]"}]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6840677326012278`*^9, 3.6840677338331738`*^9}, 
+   3.684067769417036*^9, {3.684067805022252*^9, 3.6840678273088512`*^9}, {
+   3.684067912689439*^9, 3.684067917161118*^9}, {3.684067948344431*^9, 
+   3.684067949991716*^9}, {3.684068018005509*^9, 3.684068021460421*^9}, {
+   3.684068100449184*^9, 3.684068145199267*^9}, {3.6840682230924883`*^9, 
+   3.684068278497291*^9}, 3.684081053007514*^9, {3.684081084886063*^9, 
+   3.684081085493821*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+    "\"\</usr/users/weisongl/dielectric_constant/water/isothermal/isothermal_\
+650.txt\>\"", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"\[Epsilon]c", "[", 
+        RowBox[{"650", ",", "\[Rho]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Rho]", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "0.000001", ",", "0.00001", ",", "0.00005", ",", "0.0001", ",", 
+           "0.001", ",", "0.01", ",", "0.4", ",", "0.9", ",", "1"}], "}"}]}], 
+        "}"}]}], "]"}]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.684068309232107*^9, 3.6840683148659773`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+    "\"\</usr/users/weisongl/dielectric_constant/water/isothermal/isothermal_\
+1300.txt\>\"", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"\[Epsilon]c", "[", 
+        RowBox[{"1300", ",", "\[Rho]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Rho]", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "0.000001", ",", "0.00001", ",", "0.00005", ",", "0.0001", ",", 
+           "0.001", ",", "0.01", ",", "0.4", ",", "0.9", ",", "1"}], "}"}]}], 
+        "}"}]}], "]"}]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.684068326903257*^9, 3.6840683559497013`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{
+    "\"\</usr/users/weisongl/dielectric_constant/water/isothermal/isothermal_\
+1800.txt\>\"", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"\[Epsilon]c", "[", 
+        RowBox[{"1800", ",", "\[Rho]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Rho]", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "0.000001", ",", "0.00001", ",", "0.00005", ",", "0.0001", ",", 
+           "0.001", ",", "0.01", ",", "0.4", ",", "0.9", ",", "1"}], "}"}]}], 
+        "}"}]}], "]"}]}], "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.684068363069735*^9, 3.6840683661574078`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["isochoric", "Subsubsection",
+ CellChangeTimes->{{3.6840843037119293`*^9, 3.684084307903759*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "\[Rho]", " ", "0.0001", " ", "0.001", " ", "0.1", " ", "0.4", " ", "1"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.6840845168697987`*^9, 3.684084548789176*^9}, 
+   3.6840845792041683`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_0.\
+0001.txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "0.0001"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_0.\
+001.txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "0.001"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_0.\
+01.txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "0.01"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_0.\
+1.txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "0.1"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_0.\
+4.txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "0.4"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\</usr/users/weisongl/dielectric_constant/water/isochoric/isochoric_1.\
+txt\>\"", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"\[Epsilon]c", "[", 
+         RowBox[{"T", ",", "1"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "500", ",", "700", ",", "900", ",", "1100", ",", "1300", ",", 
+            "1500", ",", "1700", ",", "1900"}], "}"}]}], "}"}]}], "]"}]}], 
+     "]"}], ";"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.684084311845427*^9, 3.684084442082013*^9}, {
+  3.6840845864283133`*^9, 3.684084592123527*^9}, {3.684148426507812*^9, 
+  3.684148426748839*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.684084509591277*^9, 3.684084510407268*^9}, {
+   3.684084601323571*^9, 3.684084638641827*^9}, 3.684148425300149*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1680, 949},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 142, 2, 45, "Input"],
+Cell[CellGroupData[{
+Cell[725, 26, 253, 8, 73, "Subsection"],
+Cell[981, 36, 10970, 259, 1943, "Input"],
+Cell[11954, 297, 10849, 256, 1943, "Input"],
+Cell[CellGroupData[{
+Cell[22828, 557, 233, 6, 75, "Input"],
+Cell[23064, 565, 9967, 252, 796, "Output"]
+}, Open  ]],
+Cell[33046, 820, 10294, 252, 1804, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43377, 1077, 202, 4, 68, "Subsection"],
+Cell[CellGroupData[{
+Cell[43604, 1085, 127, 2, 55, "Subsubsection"],
+Cell[43734, 1089, 2206, 52, 248, "Input"],
+Cell[45943, 1143, 1082, 24, 75, "Input"],
+Cell[47028, 1169, 686, 18, 75, "Input"],
+Cell[47717, 1189, 688, 18, 75, "Input"],
+Cell[48408, 1209, 688, 18, 75, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49133, 1232, 102, 1, 55, "Subsubsection"],
+Cell[49238, 1235, 234, 6, 45, "Input"],
+Cell[49475, 1243, 3630, 101, 365, "Input"],
+Cell[53108, 1346, 164, 2, 45, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
